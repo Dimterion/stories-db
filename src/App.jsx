@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchStories } from "./services/storyService";
+import StoryCard from "./components/StoryCard";
 
 export default function App() {
   const [stories, setStories] = useState([]);
@@ -22,8 +23,19 @@ export default function App() {
     loadStories();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  return (
+    <main>
+      <h1>Stories DB</h1>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
 
-  return <div>{stories[0]?.title}</div>;
+      {!loading && !error && (
+        <section>
+          {stories.map((story) => (
+            <StoryCard key={story.id} story={story} />
+          ))}
+        </section>
+      )}
+    </main>
+  );
 }
