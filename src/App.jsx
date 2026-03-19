@@ -4,6 +4,8 @@ import FilterInput from "./components/FilterInput";
 import LimitSelector from "./components/LimitSelector";
 import StoryCard from "./components/StoryCard";
 
+const LIMIT_OPTIONS = [4, 8, 16];
+
 export default function App() {
   const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -13,6 +15,9 @@ export default function App() {
 
   useEffect(() => {
     async function loadStories() {
+      setLoading(true);
+      setError(null);
+
       try {
         const data = await fetchStories(limit);
         setStories(data);
@@ -26,9 +31,11 @@ export default function App() {
     loadStories();
   }, [limit]);
 
-  const filteredStories = stories.filter((story) => {
-    return story.title.toLowerCase().includes(filter.toLowerCase());
-  });
+  // TO-DO: if limit should be applied to all available results (not only to the currently displayed ones), move it out of the useEffect and use: const filteredStories = stories.filter((story) => story.title.toLowerCase().includes(filter.toLowerCase())).slice(0, limit);
+
+  const filteredStories = stories.filter((story) =>
+    story.title.toLowerCase().includes(filter.toLowerCase()),
+  );
 
   return (
     <main>
@@ -38,7 +45,11 @@ export default function App() {
 
       <section>
         <FilterInput filter={filter} onFilterChange={setFilter} />
-        <LimitSelector limit={limit} onLimitChange={setLimit} />
+        <LimitSelector
+          limit={limit}
+          onLimitChange={setLimit}
+          options={LIMIT_OPTIONS}
+        />
       </section>
 
       {!loading && !error && (

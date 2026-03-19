@@ -1,4 +1,4 @@
-export default function LimitSelector({ limit, onLimitChange }) {
+export default function LimitSelector({ limit, onLimitChange, options }) {
   return (
     <div>
       <label htmlFor="limit">Show: </label>
@@ -7,9 +7,11 @@ export default function LimitSelector({ limit, onLimitChange }) {
         id="limit"
         onChange={(e) => onLimitChange(Number(e.target.value))}
       >
-        <option value={4}>4</option>
-        <option value={8}>8</option>
-        <option value={16}>16</option>
+        {options.map((option) => (
+          <option key={option} value={option}>
+            {option}
+          </option>
+        ))}
       </select>
     </div>
   );
