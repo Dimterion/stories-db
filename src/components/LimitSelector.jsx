@@ -1,6 +1,6 @@
 export default function LimitSelector({ limit, onLimitChange }) {
   return (
-    <section>
+    <div>
       <label htmlFor="limit">Show: </label>
       <select
         value={limit}
@@ -11,6 +11,6 @@ export default function LimitSelector({ limit, onLimitChange }) {
         <option value={8}>8</option>
         <option value={16}>16</option>
       </select>
-    </section>
+    </div>
   );
 }
