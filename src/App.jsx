@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchStories } from "./services/storyService";
 import FilterInput from "./components/FilterInput";
 import LimitSelector from "./components/LimitSelector";
+import SortSelector from "./components/SortSelector";
 import StoryCard from "./components/StoryCard";
 
 const LIMIT_OPTIONS = [4, 8, 16];
@@ -12,6 +13,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [limit, setLimit] = useState(4);
   const [filter, setFilter] = useState("");
+  const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
     async function loadStories() {
@@ -50,6 +52,7 @@ export default function App() {
           onLimitChange={setLimit}
           options={LIMIT_OPTIONS}
         />
+        <SortSelector sortBy={sortBy} onSortChange={setSortBy} />
       </section>
 
       {!loading && !error && (
