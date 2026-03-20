@@ -1,12 +1,12 @@
 [
-  { "id": 1, "title": "Story One" },
-  { "id": 2, "title": "Story Two" },
-  { "id": 3, "title": "Story Three" },
-  { "id": 4, "title": "Story Four" },
-  { "id": 5, "title": "Story Five" },
-  { "id": 6, "title": "Story Six" },
-  { "id": 7, "title": "Story Seven" },
-  { "id": 8, "title": "Story Eight" },
-  { "id": 9, "title": "Story Nine" },
-  { "id": 10, "title": "Story Ten" }
+  { "id": 1, "title": "Story One", "date": "2024-01-15" },
+  { "id": 2, "title": "Story Two", "date": "2023-07-22" },
+  { "id": 3, "title": "Story Three", "date": "2025-03-05" },
+  { "id": 4, "title": "Story Four", "date": "2022-11-30" },
+  { "id": 5, "title": "Story Five", "date": "2024-09-18" },
+  { "id": 6, "title": "Story Six", "date": "2021-04-12" },
+  { "id": 7, "title": "Story Seven", "date": "2025-01-28" },
+  { "id": 8, "title": "Story Eight", "date": "2023-12-01" },
+  { "id": 9, "title": "Story Nine", "date": "2022-06-07" },
+  { "id": 10, "title": "Story Ten", "date": "2024-11-19" }
 ]

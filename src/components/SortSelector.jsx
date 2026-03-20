@@ -7,10 +7,10 @@ export default function SortSelector({ sortBy, onSortChange }) {
         value={sortBy}
         onChange={(e) => onSortChange(e.target.value)}
       >
-        <option value="">Newest first</option>
-        <option value="">Oldest first</option>
-        <option value="">Alphabetical (A-Z)</option>
-        <option value="">Alphabetical (Z-A)</option>
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="a-z">Alphabetical (A-Z)</option>
+        <option value="z-a">Alphabetical (Z-A)</option>
       </select>
     </div>
   );

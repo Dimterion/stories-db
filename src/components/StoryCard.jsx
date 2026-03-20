@@ -1,3 +1,7 @@
 export default function StoryCard({ story }) {
-  return <article>{story.title}</article>;
+  return (
+    <article>
+      {story.title} - {story.date}
+    </article>
+  );
 }

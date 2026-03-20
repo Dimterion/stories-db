@@ -13,7 +13,7 @@ export default function App() {
   const [error, setError] = useState(null);
   const [limit, setLimit] = useState(4);
   const [filter, setFilter] = useState("");
-  const [sortBy, setSortBy] = useState("");
+  const [sortBy, setSortBy] = useState("newest");
 
   useEffect(() => {
     async function loadStories() {
@@ -35,9 +35,23 @@ export default function App() {
 
   // TO-DO: if limit should be applied to all available results (not only to the currently displayed ones), move it out of the useEffect and use: const filteredStories = stories.filter((story) => story.title.toLowerCase().includes(filter.toLowerCase())).slice(0, limit);
 
-  const filteredStories = stories.filter((story) =>
-    story.title.toLowerCase().includes(filter.toLowerCase()),
-  );
+  const filteredStories = stories
+    .filter((story) => story.title.toLowerCase().includes(filter.toLowerCase()))
+    .slice()
+    .sort((a, b) => {
+      switch (sortBy) {
+        case "a-z":
+          return a.title.localeCompare(b.title);
+        case "z-a":
+          return b.title.localeCompare(a.title);
+        case "newest":
+          return new Date(b.date) - new Date(a.date);
+        case "oldest":
+          return new Date(a.date) - new Date(b.date);
+        default:
+          return 0;
+      }
+    });
 
   return (
     <main>
