@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router";
 import { fetchStories } from "./services/storyService";
+import Header from "./components/Header";
 import HomePage from "./pages/home";
+import AboutPage from "./pages/about";
 
 const LIMIT_OPTIONS = [4, 8, 16];
 
@@ -34,24 +36,28 @@ export default function App() {
   // TO-DO: if limit should be applied to all available results (not only to the currently displayed ones), move it out of the useEffect and use: const filteredStories = stories.filter((story) => story.title.toLowerCase().includes(filter.toLowerCase())).slice(0, limit);
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <HomePage
-            stories={stories}
-            filter={filter}
-            setFilter={setFilter}
-            limit={limit}
-            setLimit={setLimit}
-            limitOptions={LIMIT_OPTIONS}
-            sortBy={sortBy}
-            setSortBy={setSortBy}
-            loading={loading}
-            error={error}
-          />
-        }
-      />
-    </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              stories={stories}
+              filter={filter}
+              setFilter={setFilter}
+              limit={limit}
+              setLimit={setLimit}
+              limitOptions={LIMIT_OPTIONS}
+              sortBy={sortBy}
+              setSortBy={setSortBy}
+              loading={loading}
+              error={error}
+            />
+          }
+        />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </>
   );
 }
