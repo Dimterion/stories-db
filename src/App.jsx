@@ -4,6 +4,7 @@ import { fetchStories } from "./services/storyService";
 import Header from "./components/Header";
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
+import NotFoundPage from "./pages/notFound";
 
 const LIMIT_OPTIONS = [4, 8, 16];
 
@@ -57,6 +58,7 @@ export default function App() {
           }
         />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
