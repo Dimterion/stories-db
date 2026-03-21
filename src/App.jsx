@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router";
 import { fetchStories } from "./services/storyService";
 import Header from "./components/Header";
 import HomePage from "./pages/home";
+import StoryPage from "./pages/story";
 import AboutPage from "./pages/about";
 import NotFoundPage from "./pages/notFound";
 
@@ -57,6 +58,7 @@ export default function App() {
             />
           }
         />
+        <Route path="/story/:id" element={<StoryPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

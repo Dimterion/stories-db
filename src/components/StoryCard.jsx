@@ -1,7 +1,11 @@
+import { Link } from "react-router";
+
 export default function StoryCard({ story }) {
   return (
-    <article>
-      {story.title} - {story.date}
-    </article>
+    <Link to={`/story/${story.id}`}>
+      <article>
+        {story.title} - {story.date}
+      </article>
+    </Link>
   );
 }

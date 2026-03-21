@@ -2,7 +2,7 @@ import sampleData from "../assets/sampleData.json";
 
 // TO-DO: adjust both variables when API is ready.
 const USE_LOCAL_DATA = true;
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_STORIES_API_URL;
 
 export async function fetchStories(limit) {
   if (USE_LOCAL_DATA) return Promise.resolve(sampleData.slice(0, limit));
