@@ -1,4 +1,5 @@
 import sampleStories from "../assets/sampleStories.json";
+import sampleStory from "../assets/sampleStory.json";
 
 // TO-DO: adjust both variables when API is ready.
 const USE_LOCAL_DATA = true;
@@ -11,5 +12,21 @@ export async function fetchStories(limit) {
 
   if (!res.ok) throw new Error("Could not fetch data.");
 
+  return res.json();
+}
+
+export async function fetchStory(id) {
+  if (USE_LOCAL_DATA) {
+    const story = sampleStory[String(id)];
+
+    if (!story) throw new Error("Story not found.");
+    
+    return Promise.resolve(story);
+  }
+
+  const res = await fetch(`${API_URL}/${id}`);
+
+  if (!res.ok) throw new Error("Could not fetch story.");
+  
   return res.json();
 }
