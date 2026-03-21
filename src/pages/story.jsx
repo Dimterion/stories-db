@@ -33,7 +33,11 @@ export default function StoryPage() {
   return (
     <main>
       <h1>{story.title}</h1>
+      {story.tags.map((tag, index) => (
+        <pre key={index}>{tag}</pre>
+      ))}
       <p>{story.date}</p>
+      <p>{story.content}</p>
     </main>
   );
 }
