@@ -1,3 +1,4 @@
+import Loader from "../components/Loader";
 import FilterInput from "../components/FilterInput";
 import LimitSelector from "../components/LimitSelector";
 import SortSelector from "../components/SortSelector";
@@ -36,7 +37,7 @@ export default function HomePage({
   return (
     <main>
       <h1>Stories DB</h1>
-      {loading && <p>Loading...</p>}
+      {loading && <Loader />}
       {error && <p>Error: {error}</p>}
 
       <section>

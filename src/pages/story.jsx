@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { fetchStory } from "../services/storyService";
+import Loader from "../components/Loader";
 
 export default function StoryPage() {
   const { id } = useParams();
@@ -33,7 +34,7 @@ export default function StoryPage() {
       <h1>{story ? story.title : "Story"}</h1>
       <Link to="/">Home</Link>
 
-      {loading && <p>Loading...</p>}
+      {loading && <Loader />}
       {error && <p>Error: {error}</p>}
 
       {!loading && !error && story && (
