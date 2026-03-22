@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
+import ReactMarkdown from "react-markdown";
 import { fetchStory } from "../services/storyService";
 
 export default function StoryPage() {
@@ -40,7 +41,7 @@ export default function StoryPage() {
           {story.tags.length > 0 &&
             story.tags.map((tag, index) => <pre key={index}>{tag}</pre>)}
           <p>{new Date(story.date).toLocaleDateString()}</p>
-          <p>{story.content}</p>
+          <ReactMarkdown>{story.content}</ReactMarkdown>
         </>
       )}
 

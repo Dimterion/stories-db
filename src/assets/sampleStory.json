@@ -5,7 +5,7 @@
     "date": "2024-01-15",
     "author": "Author One",
     "tags": ["tag1", "tag2"],
-    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "content": "**Lorem** ipsum *dolor* sit amet, consectetur adipiscing elit.\n\n Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
   },
   "2": {
     "id": 2,
