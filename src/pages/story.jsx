@@ -34,17 +34,17 @@ export default function StoryPage() {
 
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
-      {!loading && !error && !story && <p>Story not found.</p>}
 
       {!loading && !error && story && (
         <>
-          {story.tags.map((tag, index) => (
-            <pre key={index}>{tag}</pre>
-          ))}
-          <p>{story.date}</p>
+          {story.tags.length > 0 &&
+            story.tags.map((tag, index) => <pre key={index}>{tag}</pre>)}
+          <p>{new Date(story.date).toLocaleDateString()}</p>
           <p>{story.content}</p>
         </>
       )}
+
+      {!loading && !error && !story && <p>Story not found.</p>}
     </main>
   );
 }
