@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { fetchStory } from "../services/storyService";
 
 export default function StoryPage() {
@@ -27,17 +27,24 @@ export default function StoryPage() {
     loadStory();
   }, [id]);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-
   return (
     <main>
-      <h1>{story.title}</h1>
-      {story.tags.map((tag, index) => (
-        <pre key={index}>{tag}</pre>
-      ))}
-      <p>{story.date}</p>
-      <p>{story.content}</p>
+      <h1>{story ? story.title : "Story"}</h1>
+      <Link to="/">Home</Link>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
+      {!loading && !error && !story && <p>Story not found.</p>}
+
+      {!loading && !error && story && (
+        <>
+          {story.tags.map((tag, index) => (
+            <pre key={index}>{tag}</pre>
+          ))}
+          <p>{story.date}</p>
+          <p>{story.content}</p>
+        </>
+      )}
     </main>
   );
 }
