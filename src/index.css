@@ -299,3 +299,232 @@
 .about-cta-btn--outline:hover {
   background-color: rgba(230, 255, 237, 0.1);
 }
+
+/* NOT FOUND PAGE */
+/* ── Layout ── */
+.notfound-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 2rem;
+}
+
+.notfound-grid {
+  max-width: 900px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .notfound-grid {
+    grid-template-columns: 5fr 7fr;
+  }
+}
+
+/* ── Image Column ── */
+.notfound-image-col {
+  position: relative;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .notfound-image-col {
+    order: 1;
+  }
+}
+
+.notfound-image-frame {
+  aspect-ratio: 3 / 4;
+  background-color: #f4f4f1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 40px -20px rgba(48, 51, 49, 0.12);
+}
+
+.notfound-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 0.7s ease;
+}
+
+.notfound-image-frame:hover img {
+  transform: scale(1.05);
+}
+
+.notfound-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top right,
+    rgba(72, 102, 84, 0.2),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.notfound-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background-color: #e1e3e0;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 40px -20px rgba(48, 51, 49, 0.1);
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .notfound-badge {
+    display: block;
+  }
+}
+
+.notfound-badge-number {
+  font-family: "Manrope", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: #486654;
+  opacity: 0.2;
+  user-select: none;
+  line-height: 1;
+}
+
+/* ── Content Column ── */
+.notfound-content-col {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .notfound-content-col {
+    order: 2;
+  }
+}
+
+.notfound-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #486654;
+}
+
+.notfound-title {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  color: #303331;
+  margin: 0;
+}
+
+.notfound-title em {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #486654;
+}
+
+.notfound-subtitle {
+  font-family: "Newsreader", serif;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #5d605e;
+  max-width: 480px;
+  margin: 0;
+}
+
+/* ── Buttons ── */
+.notfound-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 480px) {
+  .notfound-buttons {
+    flex-direction: row;
+  }
+}
+
+.notfound-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.notfound-btn--primary {
+  background: linear-gradient(135deg, #486654, #3c5948);
+  color: #e6ffed;
+}
+
+.notfound-btn--primary:hover {
+  opacity: 0.9;
+}
+
+.notfound-btn--secondary {
+  background-color: #e7e8e6;
+  color: #303331;
+}
+
+.notfound-btn--secondary:hover {
+  background-color: #e1e3e0;
+}
+
+/* ── Suggestions ── */
+.notfound-suggestions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.notfound-suggestion-heading {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #5d605e;
+  margin: 0 0 0.5rem;
+}
+
+.notfound-suggestion-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.notfound-suggestion-col ul li a {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #486654;
+  text-decoration: none;
+}
+
+.notfound-suggestion-col ul li a:hover {
+  text-decoration: underline;
+}
