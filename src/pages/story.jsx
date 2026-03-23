@@ -30,23 +30,66 @@ export default function StoryPage() {
   }, [id]);
 
   return (
-    <main>
-      <h1>{story ? story.title : "Story"}</h1>
-      <Link to="/">Home</Link>
+    <main className="story-page">
+      <article className="story-article">
+        {/* Header area — always visible */}
+        <div className="story-header">
+          <Link to="/" className="story-back">
+            ← Back to Home
+          </Link>
 
-      {loading && <Loader />}
-      {error && <p>Error: {error}</p>}
+          {loading && <Loader />}
+          {error && <p className="story-error">Error: {error}</p>}
+          {!loading && !error && !story && (
+            <p className="story-error">Story not found.</p>
+          )}
 
-      {!loading && !error && story && (
-        <>
-          {story.tags.length > 0 &&
-            story.tags.map((tag, index) => <pre key={index}>{tag}</pre>)}
-          <p>{new Date(story.date).toLocaleDateString()}</p>
-          <ReactMarkdown>{story.content}</ReactMarkdown>
-        </>
-      )}
+          {!loading && !error && story && (
+            <>
+              {/* Tags */}
+              {story.tags.length > 0 && (
+                <div className="story-tags">
+                  {story.tags.map((tag) => (
+                    <span key={tag} className="story-tag">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
 
-      {!loading && !error && !story && <p>Story not found.</p>}
+              {/* Title & Meta */}
+              <h1 className="story-title">{story.title}</h1>
+              <div className="story-meta">
+                <span>{new Date(story.date).toLocaleDateString()}</span>
+                <span className="story-meta-dot" />
+                <span>By {story.author}</span>
+              </div>
+            </>
+          )}
+        </div>
+
+        {/* Content */}
+        {!loading && !error && story && (
+          <>
+            <div className="story-content">
+              <ReactMarkdown>{story.content}</ReactMarkdown>
+            </div>
+
+            {/* Footer Actions */}
+            <div className="story-actions">
+              <p className="story-actions-label">Share this story</p>
+              <div className="story-actions-buttons">
+                <button className="story-action-btn" aria-label="Share">
+                  ↗
+                </button>
+                <button className="story-action-btn" aria-label="Bookmark">
+                  ♡
+                </button>
+              </div>
+            </div>
+          </>
+        )}
+      </article>
     </main>
   );
 }
