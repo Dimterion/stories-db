@@ -35,29 +35,46 @@ export default function HomePage({
     });
 
   return (
-    <main>
-      <h1>Stories DB</h1>
-      {loading && <Loader />}
-      {error && <p>Error: {error}</p>}
-
-      <section>
-        <FilterInput filter={filter} onFilterChange={setFilter} />
-        <LimitSelector
-          limit={limit}
-          onLimitChange={setLimit}
-          options={limitOptions}
-        />
-        <SortSelector sortBy={sortBy} onSortChange={setSortBy} />
+    <main className="home-page">
+      {/* Hero */}
+      <section className="home-hero">
+        <h1 className="home-hero-title">
+          The Database of <br />
+          <em>Stories</em>
+        </h1>
+        <p className="home-hero-subtitle">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+          voluptates!
+        </p>
       </section>
 
+      {/* Controls */}
+      <section className="home-controls">
+        <div className="home-controls-search">
+          <FilterInput filter={filter} onFilterChange={setFilter} />
+        </div>
+        <div className="home-controls-right">
+          <SortSelector sortBy={sortBy} onSortChange={setSortBy} />
+          <LimitSelector
+            limit={limit}
+            onLimitChange={setLimit}
+            options={limitOptions}
+          />
+        </div>
+      </section>
+
+      {/* Stories */}
+      {loading && <Loader />}
+      {error && <p className="home-error">Error: {error}</p>}
+
       {!loading && !error && (
-        <section>
+        <section className="home-grid">
           {filteredStories.length > 0 ? (
-            filteredStories.map((story) => (
-              <StoryCard key={story.id} story={story} />
+            filteredStories.map((story, index) => (
+              <StoryCard key={story.id} story={story} index={index} />
             ))
           ) : (
-            <p>No matching stories.</p>
+            <p className="home-empty">No matching stories.</p>
           )}
         </section>
       )}

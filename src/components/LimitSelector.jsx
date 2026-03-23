@@ -1,18 +1,18 @@
 export default function LimitSelector({ limit, onLimitChange, options }) {
   return (
-    <div>
-      <label htmlFor="limit">Show: </label>
-      <select
-        value={limit}
-        id="limit"
-        onChange={(e) => onLimitChange(Number(e.target.value))}
-      >
+    <div className="control-group">
+      <label className="control-label">Max displayed</label>
+      <div className="limit-buttons">
         {options.map((option) => (
-          <option key={option} value={option}>
+          <button
+            key={option}
+            onClick={() => onLimitChange(option)}
+            className={`limit-btn ${limit === option ? "limit-btn--active" : ""}`}
+          >
             {option}
-          </option>
+          </button>
         ))}
-      </select>
+      </div>
     </div>
   );
 }
