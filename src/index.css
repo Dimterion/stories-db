@@ -1,0 +1,301 @@
+/* ABOUT PAGE */
+
+/* ── Layout ── */
+.about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+}
+
+/* ── Hero ── */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 1024px) {
+  .about-hero {
+    grid-template-columns: 7fr 5fr;
+  }
+}
+
+.about-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #486654;
+}
+
+.about-title {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: #303331;
+  margin: 0;
+}
+
+.about-title em {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #486654;
+}
+
+.about-subtitle {
+  font-family: "Newsreader", serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #5d605e;
+  max-width: 600px;
+  margin: 0;
+}
+
+.about-hero-image-wrapper {
+  position: relative;
+  margin-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .about-hero-image-wrapper {
+    margin-top: 0;
+  }
+}
+
+.about-hero-image-frame {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transform: rotate(2deg);
+  transition: transform 0.5s ease;
+  box-shadow: 0 20px 40px rgba(48, 51, 49, 0.1);
+}
+
+.about-hero-image-frame:hover {
+  transform: rotate(0deg);
+}
+
+.about-hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: filter 0.7s ease;
+}
+
+.about-hero-image-frame:hover img {
+  filter: grayscale(0);
+}
+
+.about-hero-badge {
+  position: absolute;
+  bottom: -2rem;
+  left: -2rem;
+  background-color: #c9ead4;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .about-hero-badge {
+    display: block;
+  }
+}
+
+.about-badge-number {
+  font-family: "Manrope", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #3b5847;
+  margin: 0;
+}
+
+.about-badge-label {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #3b5847;
+  margin: 0;
+}
+
+/* ── Vision ── */
+.about-vision {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+@media (min-width: 1024px) {
+  .about-vision {
+    grid-template-columns: 4fr 8fr;
+  }
+}
+
+.about-vision-heading h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #303331;
+  position: sticky;
+  top: 6rem;
+}
+
+.about-vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.about-vision-content p {
+  font-family: "Newsreader", serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #5d605e;
+  margin: 0;
+}
+
+.about-quote {
+  font-family: "Newsreader", serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #303331;
+  background-color: #f4f4f1;
+  border-radius: 0.5rem;
+  padding: 3rem;
+  margin: 1rem 0;
+  position: relative;
+}
+
+/* ── Values ── */
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-values {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-value-card {
+  background-color: #edeeec;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.about-value-card--alt {
+  background-color: #e1e3e0;
+}
+
+.about-value-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #303331;
+  margin: 0 0 0.5rem;
+}
+
+.about-value-card p {
+  font-family: "Newsreader", serif;
+  font-size: 0.9rem;
+  color: #5d605e;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── CTA ── */
+.about-cta {
+  margin-top: 6rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #486654, #3c5948);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-cta {
+    padding: 6rem;
+  }
+}
+
+.about-cta h2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #e6ffed;
+  margin: 0 0 1rem;
+}
+
+.about-cta p {
+  font-family: "Newsreader", serif;
+  font-size: 1.1rem;
+  color: rgba(230, 255, 237, 0.8);
+  margin: 0 auto 2.5rem;
+  max-width: 480px;
+}
+
+.about-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .about-cta-buttons {
+    flex-direction: row;
+  }
+}
+
+.about-cta-btn {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.about-cta-btn--primary {
+  background-color: #c9ead4;
+  color: #3b5847;
+}
+
+.about-cta-btn--primary:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.about-cta-btn--outline {
+  background-color: transparent;
+  border: 1px solid rgba(230, 255, 237, 0.3);
+  color: #e6ffed;
+}
+
+.about-cta-btn--outline:hover {
+  background-color: rgba(230, 255, 237, 0.1);
+}
