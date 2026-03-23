@@ -6,6 +6,7 @@ import HomePage from "./pages/home";
 import StoryPage from "./pages/story";
 import AboutPage from "./pages/about";
 import NotFoundPage from "./pages/notFound";
+import Footer from "./components/Footer";
 
 const LIMIT_OPTIONS = [4, 8, 16];
 
@@ -40,28 +41,31 @@ export default function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <HomePage
-              stories={stories}
-              filter={filter}
-              setFilter={setFilter}
-              limit={limit}
-              setLimit={setLimit}
-              limitOptions={LIMIT_OPTIONS}
-              sortBy={sortBy}
-              setSortBy={setSortBy}
-              loading={loading}
-              error={error}
-            />
-          }
-        />
-        <Route path="/story/:id" element={<StoryPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <div className="app-content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                stories={stories}
+                filter={filter}
+                setFilter={setFilter}
+                limit={limit}
+                setLimit={setLimit}
+                limitOptions={LIMIT_OPTIONS}
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                loading={loading}
+                error={error}
+              />
+            }
+          />
+          <Route path="/story/:id" element={<StoryPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
   );
 }
