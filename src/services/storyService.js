@@ -22,16 +22,16 @@ export async function fetchStories() {
   return res.json();
 }
 
-export async function fetchStory(id) {
+export async function fetchStory(slug) {
   if (USE_LOCAL_DATA) {
-    const story = sampleStory[String(id)];
+    const story = Object.values(sampleStory).find((s) => s.slug === slug);
 
     if (!story) throw new Error("Story not found.");
 
     return Promise.resolve(story);
   }
 
-  const res = await fetch(`${STORY_API_URL}/${id}`);
+  const res = await fetch(`${STORY_API_URL}/${slug}`);
 
   if (!res.ok) throw new Error("Could not fetch story.");
 

@@ -65,7 +65,7 @@ export default function App() {
               />
             }
           />
-          <Route path="/story/:id" element={<StoryPage />} />
+          <Route path="/story/:slug" element={<StoryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

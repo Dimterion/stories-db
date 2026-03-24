@@ -11,7 +11,7 @@ export default function StoryCard({ story, index }) {
         isFeatured ? "story-card--featured" : "story-card--regular"
       } ${isOffset ? "story-card--offset" : ""}`}
     >
-      <Link to={`/story/${story.id}`} className="story-card-link">
+      <Link to={`/story/${story.slug}`} className="story-card-link">
         {/* Optional thumbnail at top */}
         <div className="story-card-image-wrapper">
           <FallbackImage

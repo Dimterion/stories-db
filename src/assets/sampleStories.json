@@ -1,12 +1,14 @@
 [
   {
     "id": 1,
+    "slug": "story-one",
     "title": "Story One",
     "date": "2024-01-15",
     "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
   {
     "id": 2,
+    "slug": "story-two",
     "title": "Story Two",
     "date": "2023-07-22",
     "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -14,48 +16,56 @@
   },
   {
     "id": 3,
+    "slug": "story-three",
     "title": "Story Three",
     "date": "2025-03-05",
     "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
   },
   {
     "id": 4,
+    "slug": "story-four",
     "title": "Story Four",
     "date": "2022-11-30",
     "excerpt": "Duis aute irure dolor in reprehenderit in voluptate velit esse."
   },
   {
     "id": 5,
+    "slug": "story-five",
     "title": "Story Five",
     "date": "2024-09-18",
     "excerpt": "Excepteur sint occaecat cupidatat non proident sunt in culpa."
   },
   {
     "id": 6,
+    "slug": "story-six",
     "title": "Story Six",
     "date": "2021-04-12",
     "excerpt": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit."
   },
   {
     "id": 7,
+    "slug": "story-seven",
     "title": "Story Seven",
     "date": "2025-01-28",
     "excerpt": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet."
   },
   {
     "id": 8,
+    "slug": "story-eight",
     "title": "Story Eight",
     "date": "2023-12-01",
     "excerpt": "Ut labore et dolore magnam aliquam quaerat voluptatem sequi."
   },
   {
     "id": 9,
+    "slug": "story-nine",
     "title": "Story Nine",
     "date": "2022-06-07",
     "excerpt": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit."
   },
   {
     "id": 10,
+    "slug": "story-ten",
     "title": "Story Ten",
     "date": "2024-11-19",
     "excerpt": "At vero eos et accusamus et iusto odio dignissimos ducimus."

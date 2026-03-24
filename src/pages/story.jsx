@@ -6,7 +6,7 @@ import Loader from "../components/Loader";
 import FallbackImage from "../components/FallbackImage";
 
 export default function StoryPage() {
-  const { id } = useParams();
+  const { slug } = useParams();
 
   const [story, setStory] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,7 +18,7 @@ export default function StoryPage() {
       setError(null);
 
       try {
-        const data = await fetchStory(id);
+        const data = await fetchStory(slug);
         setStory(data);
       } catch (err) {
         setError(err.message);
@@ -28,7 +28,7 @@ export default function StoryPage() {
     }
 
     loadStory();
-  }, [id]);
+  }, [slug]);
 
   return (
     <main className="story-page">

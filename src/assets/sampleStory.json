@@ -1,6 +1,7 @@
 {
   "1": {
     "id": 1,
+    "slug": "story-one",
     "title": "Story One",
     "date": "2024-01-15",
     "author": "Author One",
@@ -9,14 +10,17 @@
   },
   "2": {
     "id": 2,
+    "slug": "story-two",
     "title": "Story Two",
     "date": "2023-07-22",
     "author": "Author Two",
     "tags": ["tag1", "tag3"],
-    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGkUWYuGturDsk9mobMm95v-cTb0X5OOqUe7YedgRssZz2c6X_aYnKUTPWB4QtK7LzAkU5rwNP8ArwAWjPpJcrUxaqW6St-nHFpmBXMT09K11GuWpnGjRpsM_-ySPZpom_nSDbwpKkr90ULnnRHBC_Q32-_-zhUXQUJrt6uCzkYUtQPfGI5vK0ayXxshwtP8pfC3bm_5fMy3-0d7VIXUWjgUapTdtqSAxnlL9rOD4UuCyZE3jdOVUppp4vWwIjjx-zPlyIEmEcEBP0"
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCGkUWYuGturDsk9mobMm95v-cTb0X5OOqUe7YedgRssZz2c6X_aYnKUTPWB4QtK7LzAkU5rwNP8ArwAWjPpJcrUxaqW6St-nHFpmBXMT09K11GuWpnGjRpsM_-ySPZpom_nSDbwpKkr90ULnnRHBC_Q32-_-zhUXQUJrt6uCzkYUtQPfGI5vK0ayXxshwtP8pfC3bm_5fMy3-0d7VIXUWjgUapTdtqSAxnlL9rOD4UuCyZE3jdOVUppp4vWwIjjx-zPlyIEmEcEBP0",
+    "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
   "3": {
     "id": 3,
+    "slug": "story-three",
     "title": "Story Three",
     "date": "2025-03-05",
     "author": "Author Three",
@@ -25,6 +29,7 @@
   },
   "4": {
     "id": 4,
+    "slug": "story-four",
     "title": "Story Four",
     "date": "2022-11-30",
     "author": "Author Four",
@@ -33,6 +38,7 @@
   },
   "5": {
     "id": 5,
+    "slug": "story-five",
     "title": "Story Five",
     "date": "2024-09-18",
     "author": "Author Five",
@@ -41,6 +47,7 @@
   },
   "6": {
     "id": 6,
+    "slug": "story-six",
     "title": "Story Six",
     "date": "2021-04-12",
     "author": "Author Six",
@@ -49,6 +56,7 @@
   },
   "7": {
     "id": 7,
+    "slug": "story-seven",
     "title": "Story Seven",
     "date": "2025-01-28",
     "author": "Author Seven",
@@ -57,6 +65,7 @@
   },
   "8": {
     "id": 8,
+    "slug": "story-eight",
     "title": "Story Eight",
     "date": "2023-12-01",
     "author": "Author Eight",
@@ -65,6 +74,7 @@
   },
   "9": {
     "id": 9,
+    "slug": "story-nine",
     "title": "Story Nine",
     "date": "2022-06-07",
     "author": "Author Nine",
@@ -73,6 +83,7 @@
   },
   "10": {
     "id": 10,
+    "slug": "story-ten",
     "title": "Story Ten",
     "date": "2024-11-19",
     "author": "Author Ten",
