@@ -8,7 +8,7 @@ import AboutPage from "./pages/about";
 import NotFoundPage from "./pages/notFound";
 import Footer from "./components/Footer";
 
-const LIMIT_OPTIONS = [4, 8, 16];
+const LIMIT_OPTIONS = [4, 8, 12];
 
 export default function App() {
   const [stories, setStories] = useState([]);
@@ -38,6 +38,10 @@ export default function App() {
 
   // TO-DO: if limit should be applied to all available results (not only to the currently displayed ones), move it out of the useEffect and use: const filteredStories = stories.filter((story) => story.title.toLowerCase().includes(filter.toLowerCase())).slice(0, limit);
 
+  function handleLoadMore() {
+    setLimit((prev) => prev + 4);
+  }
+
   return (
     <>
       <Header />
@@ -55,6 +59,7 @@ export default function App() {
                 limitOptions={LIMIT_OPTIONS}
                 sortBy={sortBy}
                 setSortBy={setSortBy}
+                onLoadMore={handleLoadMore}
                 loading={loading}
                 error={error}
               />

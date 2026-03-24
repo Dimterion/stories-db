@@ -359,6 +359,32 @@ button {
   margin-bottom: 1rem;
 }
 
+.home-load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.load-more-btn {
+  padding: 1rem 3rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #486654, #3c5948);
+  color: #e6ffed;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(72, 102, 84, 0.15);
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.load-more-btn:hover {
+  box-shadow: 0 12px 32px rgba(72, 102, 84, 0.3);
+}
+
 /* STORY CARD */
 /* Base card */
 .story-card-link {

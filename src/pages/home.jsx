@@ -13,10 +13,11 @@ export default function HomePage({
   limitOptions,
   sortBy,
   setSortBy,
+  onLoadMore,
   loading,
   error,
 }) {
-  const filteredStories = stories
+  const allFilteredStories = stories
     .filter((story) => story.title.toLowerCase().includes(filter.toLowerCase()))
     .slice()
     .sort((a, b) => {
@@ -32,8 +33,9 @@ export default function HomePage({
         default:
           return 0;
       }
-    })
-    .slice(0, limit);
+    });
+  const visibleStories = allFilteredStories.slice(0, limit);
+  const hasMore = limit < allFilteredStories.length;
 
   return (
     <main className="home-page">
@@ -69,15 +71,25 @@ export default function HomePage({
       {error && <p className="home-error">Error: {error}</p>}
 
       {!loading && !error && (
-        <section className="home-grid">
-          {filteredStories.length > 0 ? (
-            filteredStories.map((story, index) => (
-              <StoryCard key={story.id} story={story} index={index} />
-            ))
-          ) : (
-            <p className="home-empty">No matching stories.</p>
+        <>
+          <section className="home-grid">
+            {visibleStories.length > 0 ? (
+              visibleStories.map((story, index) => (
+                <StoryCard key={story.id} story={story} index={index} />
+              ))
+            ) : (
+              <p className="home-empty">No matching stories.</p>
+            )}
+          </section>
+          {/* Load More */}
+          {hasMore && (
+            <div className="home-load-more">
+              <button onClick={onLoadMore} className="load-more-btn">
+                Load More Stories
+              </button>
+            </div>
           )}
-        </section>
+        </>
       )}
     </main>
   );
