@@ -32,7 +32,8 @@ export default function HomePage({
         default:
           return 0;
       }
-    });
+    })
+    .slice(0, limit);
 
   return (
     <main className="home-page">

@@ -24,7 +24,7 @@ export default function App() {
       setError(null);
 
       try {
-        const data = await fetchStories(limit);
+        const data = await fetchStories();
         setStories(data);
       } catch (err) {
         setError(err.message);
@@ -34,7 +34,7 @@ export default function App() {
     }
 
     loadStories();
-  }, [limit]);
+  }, []);
 
   // TO-DO: if limit should be applied to all available results (not only to the currently displayed ones), move it out of the useEffect and use: const filteredStories = stories.filter((story) => story.title.toLowerCase().includes(filter.toLowerCase())).slice(0, limit);
 

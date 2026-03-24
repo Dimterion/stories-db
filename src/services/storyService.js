@@ -12,10 +12,10 @@ const USE_LOCAL_DATA = true;
 const STORIES_API_URL = import.meta.env.VITE_STORIES_API_URL;
 const STORY_API_URL = import.meta.env.VITE_STORY_API_URL;
 
-export async function fetchStories(limit) {
-  if (USE_LOCAL_DATA) return Promise.resolve(sampleStories.slice(0, limit));
+export async function fetchStories() {
+  if (USE_LOCAL_DATA) return Promise.resolve(sampleStories);
 
-  const res = await fetch(`${STORIES_API_URL}?limit=${limit}`);
+  const res = await fetch(STORIES_API_URL);
 
   if (!res.ok) throw new Error("Could not fetch stories.");
 
