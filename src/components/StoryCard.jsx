@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import FallbackImage from "./FallbackImage";
 
 export default function StoryCard({ story, index }) {
   const isFeatured = index === 0;
@@ -6,9 +7,20 @@ export default function StoryCard({ story, index }) {
 
   return (
     <article
-      className={`story-card ${isFeatured ? "story-card--featured" : "story-card--regular"} ${isOffset ? "story-card--offset" : ""}`}
+      className={`story-card ${
+        isFeatured ? "story-card--featured" : "story-card--regular"
+      } ${isOffset ? "story-card--offset" : ""}`}
     >
       <Link to={`/story/${story.id}`} className="story-card-link">
+        {/* Optional thumbnail at top */}
+        <div className="story-card-image-wrapper">
+          <FallbackImage
+            src={story.image}
+            alt={story.title}
+            className="story-card-image"
+          />
+        </div>
+
         <div className="story-card-meta">
           {new Date(story.date).toLocaleDateString()}
         </div>

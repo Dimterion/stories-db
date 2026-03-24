@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
 import { fetchStory } from "../services/storyService";
 import Loader from "../components/Loader";
+import FallbackImage from "../components/FallbackImage";
 
 export default function StoryPage() {
   const { id } = useParams();
@@ -71,6 +72,15 @@ export default function StoryPage() {
         {/* Content */}
         {!loading && !error && story && (
           <>
+            {/* Header image */}
+            <div className="story-hero-image">
+              <FallbackImage
+                src={story.image}
+                alt={story.title}
+                className="story-hero-image-tag"
+              />
+            </div>
+
             <div className="story-content">
               <ReactMarkdown>{story.content}</ReactMarkdown>
             </div>
