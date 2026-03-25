@@ -29,6 +29,19 @@ button {
   font: inherit;
 }
 
+/* VARIABLES */
+/* Colors */
+:root {
+  /* Brand Colors */
+  --color-primary: #486654;
+  --color-secondary: #3c5948;
+  --color-tertiary: #e6ffed;
+  --color-bg: #f4f4f1;
+  --color-text: #303331;
+  --color-subtext: #5d605e;
+  --color-error: #a83836;
+}
+
 /* LAYOUT */
 #root {
   display: flex;
@@ -63,7 +76,7 @@ button {
   border-bottom: 1px solid rgba(176, 178, 176, 0.4);
   font-family: "Newsreader", serif;
   font-size: 1.1rem;
-  color: #303331;
+  color: var(--color-text);
   padding: 0.5rem 0;
   outline: none;
   transition: border-color 0.2s ease;
@@ -74,7 +87,7 @@ button {
 }
 
 .filter-input:focus {
-  border-bottom-color: #486654;
+  border-bottom-color: var(--color-primary);
 }
 
 .control-group {
@@ -90,7 +103,7 @@ button {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #303331;
+  color: var(--color-text);
   padding: 0.5rem 0;
   cursor: pointer;
   outline: none;
@@ -98,7 +111,7 @@ button {
 }
 
 .control-select:focus {
-  border-bottom-color: #486654;
+  border-bottom-color: var(--color-primary);
 }
 
 .limit-buttons {
@@ -111,7 +124,7 @@ button {
   font-family: "Manrope", sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #5d605e;
+  color: var(--color-subtext);
   background: none;
   border: none;
   cursor: pointer;
@@ -120,13 +133,13 @@ button {
 }
 
 .limit-btn:hover {
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .limit-btn--active {
-  color: #486654;
+  color: var(--color-primary);
   font-weight: 700;
-  border-bottom: 2px solid #486654;
+  border-bottom: 2px solid var(--color-primary);
   padding-bottom: 2px;
 }
 
@@ -155,12 +168,12 @@ button {
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: #303331;
+  color: var(--color-text);
   text-decoration: none;
 }
 
 .header-logo:hover {
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .header-nav {
@@ -181,18 +194,18 @@ button {
 }
 
 .header-link:hover {
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .header-link--active {
-  color: #486654;
-  border-bottom: 2px solid #486654;
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
   padding-bottom: 2px;
 }
 
 /* FOOTER */
 .footer {
-  background-color: #f4f4f1;
+  background-color: var(--color-bg);
   padding: 3rem 1.5rem;
   margin-top: 5rem;
 }
@@ -231,7 +244,7 @@ button {
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: #303331;
+  color: var(--color-text);
 }
 
 .footer-copy {
@@ -261,7 +274,7 @@ button {
 }
 
 .footer-link:hover {
-  color: #303331;
+  color: var(--color-text);
 }
 
 /* HOME PAGE */
@@ -282,7 +295,7 @@ button {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: #303331;
+  color: var(--color-text);
   margin-bottom: 1.5rem;
 }
 
@@ -290,14 +303,14 @@ button {
   font-family: "Newsreader", serif;
   font-style: italic;
   font-weight: 300;
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .home-hero-subtitle {
   font-family: "Newsreader", serif;
   font-size: 1.25rem;
   line-height: 1.7;
-  color: #5d605e;
+  color: var(--color-subtext);
   max-width: 600px;
 }
 
@@ -306,7 +319,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background-color: #f4f4f1;
+  background-color: var(--color-bg);
   padding: 2rem;
   border-radius: 0.5rem;
   margin-bottom: 3rem;
@@ -347,7 +360,7 @@ button {
 .home-empty {
   font-family: "Newsreader", serif;
   font-style: italic;
-  color: #5d605e;
+  color: var(--color-subtext);
   font-size: 1.1rem;
   grid-column: 1 / -1;
 }
@@ -355,7 +368,7 @@ button {
 .home-error {
   font-family: "Manrope", sans-serif;
   font-size: 0.85rem;
-  color: #a83836;
+  color: var(--color-error);
   margin-bottom: 1rem;
 }
 
@@ -372,13 +385,19 @@ button {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #486654, #3c5948);
-  color: #e6ffed;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-tertiary);
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
   box-shadow: 0 8px 24px rgba(72, 102, 84, 0.15);
-  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .load-more-btn:hover {
@@ -402,7 +421,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #5d605e;
+  color: var(--color-subtext);
 }
 
 .story-card-title {
@@ -410,19 +429,19 @@ button {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
-  color: #303331;
+  color: var(--color-text);
   transition: color 0.3s ease;
 }
 
 .story-card-link:hover .story-card-title {
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .story-card-excerpt {
   font-family: "Newsreader", serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: #5d605e;
+  color: var(--color-subtext);
   opacity: 0.85;
   display: -webkit-box;
   line-clamp: 3;
@@ -437,7 +456,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #486654;
+  color: var(--color-primary);
   margin-top: auto;
   display: inline-block;
   transition: transform 0.2s ease;
@@ -469,7 +488,7 @@ button {
 /* Regular cards */
 .story-card--regular {
   grid-column: 1 / -1;
-  background-color: #f4f4f1;
+  background-color: var(--color-bg);
   padding: 2rem;
   border-radius: 0.5rem;
   transition: background-color 0.3s ease;
@@ -498,7 +517,7 @@ button {
   border-radius: 0.5rem;
   overflow: hidden;
   margin-bottom: 1rem;
-  background-color: #f4f4f1;
+  background-color: var(--color-bg);
 }
 
 .story-card-image {
@@ -533,7 +552,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #486654;
+  color: var(--color-primary);
   text-decoration: none;
   margin-bottom: 2rem;
   transition: opacity 0.2s ease;
@@ -575,7 +594,7 @@ button {
   font-size: clamp(2.5rem, 6vw, 3.75rem);
   font-weight: 400;
   line-height: 1.15;
-  color: #303331;
+  color: var(--color-text);
   margin-bottom: 1.25rem;
 }
 
@@ -589,7 +608,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #5d605e;
+  color: var(--color-subtext);
 }
 
 .story-meta-dot {
@@ -606,7 +625,7 @@ button {
   font-family: "Newsreader", serif;
   font-size: 1.15rem;
   line-height: 1.85;
-  color: #303331;
+  color: var(--color-text);
 }
 
 .story-content p {
@@ -616,7 +635,7 @@ button {
 .story-content p:first-child::first-letter {
   font-size: 4.5rem;
   font-weight: 700;
-  color: #486654;
+  color: var(--color-primary);
   float: left;
   line-height: 0.8;
   margin-right: 0.15em;
@@ -626,7 +645,7 @@ button {
 
 .story-content strong {
   font-weight: 600;
-  color: #303331;
+  color: var(--color-text);
 }
 
 .story-content em {
@@ -640,14 +659,14 @@ button {
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .story-content h2,
 .story-content h3 {
   font-family: "Manrope", sans-serif;
   font-weight: 700;
-  color: #303331;
+  color: var(--color-text);
   margin: 2.5rem 0 1rem;
 }
 
@@ -659,7 +678,7 @@ button {
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #5d605e;
+  color: var(--color-subtext);
 }
 
 /* Actions */
@@ -679,7 +698,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #5d605e;
+  color: var(--color-subtext);
 }
 
 .story-actions-buttons {
@@ -709,7 +728,7 @@ button {
 .story-error {
   font-family: "Manrope", sans-serif;
   font-size: 0.85rem;
-  color: #a83836;
+  color: var(--color-error);
   margin-top: 1rem;
 }
 
@@ -774,7 +793,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .about-title {
@@ -783,7 +802,7 @@ button {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
-  color: #303331;
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -791,14 +810,14 @@ button {
   font-family: "Newsreader", serif;
   font-style: italic;
   font-weight: 400;
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .about-subtitle {
   font-family: "Newsreader", serif;
   font-size: 1.25rem;
   line-height: 1.7;
-  color: #5d605e;
+  color: var(--color-subtext);
   max-width: 600px;
   margin: 0;
 }
@@ -890,7 +909,7 @@ button {
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #303331;
+  color: var(--color-text);
   position: sticky;
   top: 6rem;
 }
@@ -905,7 +924,7 @@ button {
   font-family: "Newsreader", serif;
   font-size: 1.2rem;
   line-height: 1.8;
-  color: #5d605e;
+  color: var(--color-subtext);
   margin: 0;
 }
 
@@ -914,8 +933,8 @@ button {
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.6;
-  color: #303331;
-  background-color: #f4f4f1;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   border-radius: 0.5rem;
   padding: 3rem;
   margin: 1rem 0;
@@ -950,14 +969,14 @@ button {
   font-family: "Manrope", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  color: #303331;
+  color: var(--color-text);
   margin: 0 0 0.5rem;
 }
 
 .about-value-card p {
   font-family: "Newsreader", serif;
   font-size: 0.9rem;
-  color: #5d605e;
+  color: var(--color-subtext);
   margin: 0;
   line-height: 1.6;
 }
@@ -966,7 +985,11 @@ button {
 .about-cta {
   margin-top: 6rem;
   padding: 4rem 2rem;
-  background: linear-gradient(135deg, #486654, #3c5948);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   border-radius: 0.5rem;
   text-align: center;
 }
@@ -982,7 +1005,7 @@ button {
   font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: #e6ffed;
+  color: var(--color-tertiary);
   margin: 0 0 1rem;
 }
 
@@ -1033,7 +1056,7 @@ button {
 .about-cta-btn--outline {
   background-color: transparent;
   border: 1px solid rgba(230, 255, 237, 0.3);
-  color: #e6ffed;
+  color: var(--color-tertiary);
 }
 
 .about-cta-btn--outline:hover {
@@ -1079,7 +1102,7 @@ button {
 
 .notfound-image-frame {
   aspect-ratio: 3 / 4;
-  background-color: #f4f4f1;
+  background-color: var(--color-bg);
   border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
@@ -1131,7 +1154,7 @@ button {
   font-size: 3.5rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: #486654;
+  color: var(--color-primary);
   opacity: 0.2;
   user-select: none;
   line-height: 1;
@@ -1157,7 +1180,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .notfound-title {
@@ -1166,7 +1189,7 @@ button {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 0.9;
-  color: #303331;
+  color: var(--color-text);
   margin: 0;
 }
 
@@ -1174,14 +1197,14 @@ button {
   font-family: "Newsreader", serif;
   font-style: italic;
   font-weight: 400;
-  color: #486654;
+  color: var(--color-primary);
 }
 
 .notfound-subtitle {
   font-family: "Newsreader", serif;
   font-size: 1.2rem;
   line-height: 1.7;
-  color: #5d605e;
+  color: var(--color-subtext);
   max-width: 480px;
   margin: 0;
 }
@@ -1213,8 +1236,12 @@ button {
 }
 
 .notfound-btn--primary {
-  background: linear-gradient(135deg, #486654, #3c5948);
-  color: #e6ffed;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  color: var(--color-tertiary);
 }
 
 .notfound-btn--primary:hover {
@@ -1223,7 +1250,7 @@ button {
 
 .notfound-btn--secondary {
   background-color: #e7e8e6;
-  color: #303331;
+  color: var(--color-text);
 }
 
 .notfound-btn--secondary:hover {
@@ -1244,7 +1271,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #5d605e;
+  color: var(--color-subtext);
   margin: 0 0 0.5rem;
 }
 
@@ -1261,7 +1288,7 @@ button {
   font-family: "Newsreader", serif;
   font-style: italic;
   font-size: 0.9rem;
-  color: #486654;
+  color: var(--color-primary);
   text-decoration: none;
 }
 

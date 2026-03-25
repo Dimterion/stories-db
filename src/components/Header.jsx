@@ -5,7 +5,7 @@ export default function Header() {
     <header className="header">
       <div className="header-inner">
         <NavLink to="/" className="header-logo">
-          Stories DB
+          Stories
         </NavLink>
 
         <nav className="header-nav">
