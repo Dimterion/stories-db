@@ -4,14 +4,25 @@ export default function FilterInput({ filter, onFilterChange }) {
       <label htmlFor="filter" className="control-label">
         Search Stories
       </label>
-      <input
-        id="filter"
-        type="text"
-        value={filter}
-        onChange={(e) => onFilterChange(e.target.value)}
-        placeholder="Filter by title..."
-        className="filter-input"
-      />
+      <div className="filter-input-row">
+        <input
+          id="filter"
+          type="text"
+          value={filter}
+          onChange={(e) => onFilterChange(e.target.value)}
+          placeholder="Search by title..."
+          className="filter-input"
+        />
+        {filter && (
+          <button
+            className="filter-clear-btn"
+            onClick={() => onFilterChange("")}
+            aria-label="Clear search"
+          >
+            ✕
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -98,6 +98,33 @@ button {
   border-bottom-color: var(--color-primary);
 }
 
+.filter-input-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-input-row .filter-input {
+  padding-right: 2rem;
+}
+
+.filter-clear-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  color: var(--color-subtext);
+  padding: 0.25rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.filter-clear-btn:hover {
+  color: var(--color-text);
+}
+
 .control-group {
   display: flex;
   flex-direction: column;
@@ -378,10 +405,11 @@ button {
   }
 }
 
-/* Offset card (third card, nudged down) */
+/* Offset card (third card) */
 @media (min-width: 768px) {
+  /* TO-DO: add special styling if needed. */
   .story-card--offset {
-    margin-top: 4rem;
+    margin-top: auto;
   }
 }
 
