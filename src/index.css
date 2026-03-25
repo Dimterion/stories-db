@@ -30,9 +30,12 @@ button {
 }
 
 /* VARIABLES */
-/* Colors */
 :root {
-  /* Brand Colors */
+  /* Font */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Newsreader", serif;
+
+  /* Colors */
   --color-primary: #486654;
   --color-secondary: #3c5948;
   --color-tertiary: #e6ffed;
@@ -40,6 +43,11 @@ button {
   --color-text: #303331;
   --color-subtext: #5d605e;
   --color-error: #a83836;
+  --color-surface: #edeeec; /* card backgrounds */
+  --color-surface-high: #e1e3e0; /* alt cards, badges */
+  --color-tag-bg: #cfe9d9; /* story tag background */
+  --color-tag-text: #40574b; /* story tag text */
+  --color-border: rgba(176, 178, 176, 0.2); /* borders, dividers */
 }
 
 /* LAYOUT */
@@ -56,7 +64,7 @@ button {
 /* SHARED CONTROLS */
 .control-label {
   display: block;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -74,7 +82,7 @@ button {
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(176, 178, 176, 0.4);
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   color: var(--color-text);
   padding: 0.5rem 0;
@@ -99,7 +107,7 @@ button {
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(176, 178, 176, 0.4);
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -121,7 +129,7 @@ button {
 }
 
 .limit-btn {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-subtext);
@@ -151,7 +159,7 @@ button {
   z-index: 50;
   background-color: rgba(250, 249, 247, 0.85);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(176, 178, 176, 0.2);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .header-inner {
@@ -164,7 +172,7 @@ button {
 }
 
 .header-logo {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -183,7 +191,7 @@ button {
 }
 
 .header-link {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -241,14 +249,14 @@ button {
 }
 
 .footer-logo {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
 }
 
 .footer-copy {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -263,7 +271,7 @@ button {
 }
 
 .footer-link {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -290,7 +298,7 @@ button {
 }
 
 .home-hero-title {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -300,14 +308,14 @@ button {
 }
 
 .home-hero-title em {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-weight: 300;
   color: var(--color-primary);
 }
 
 .home-hero-subtitle {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.25rem;
   line-height: 1.7;
   color: var(--color-subtext);
@@ -358,7 +366,7 @@ button {
 }
 
 .home-empty {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   color: var(--color-subtext);
   font-size: 1.1rem;
@@ -366,7 +374,7 @@ button {
 }
 
 .home-error {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.85rem;
   color: var(--color-error);
   margin-bottom: 1rem;
@@ -380,7 +388,7 @@ button {
 
 .load-more-btn {
   padding: 1rem 3rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -416,7 +424,7 @@ button {
 }
 
 .story-card-meta {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -425,7 +433,7 @@ button {
 }
 
 .story-card-title {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
@@ -438,7 +446,7 @@ button {
 }
 
 .story-card-excerpt {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   color: var(--color-subtext);
@@ -451,7 +459,7 @@ button {
 }
 
 .story-card-cta {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -470,7 +478,7 @@ button {
 .story-card--featured {
   grid-column: 1 / -1;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(176, 178, 176, 0.2);
+  border-bottom: 1px solid var(--color-border);
 }
 
 @media (min-width: 768px) {
@@ -547,7 +555,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -576,11 +584,11 @@ button {
 }
 
 .story-tag {
-  background-color: #cfe9d9;
-  color: #40574b;
+  background-color: var(--color-tag-bg);
+  color: var(--color-tag-text);
   padding: 0.25rem 0.75rem;
   border-radius: 0.75rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -589,7 +597,7 @@ button {
 
 /* Title */
 .story-title {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: clamp(2.5rem, 6vw, 3.75rem);
   font-weight: 400;
@@ -603,7 +611,7 @@ button {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -622,7 +630,7 @@ button {
 
 /* Content */
 .story-content {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.15rem;
   line-height: 1.85;
   color: var(--color-text);
@@ -640,7 +648,7 @@ button {
   line-height: 0.8;
   margin-right: 0.15em;
   margin-top: 0.1em;
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
 }
 
 .story-content strong {
@@ -664,7 +672,7 @@ button {
 
 .story-content h2,
 .story-content h3 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-weight: 700;
   color: var(--color-text);
   margin: 2.5rem 0 1rem;
@@ -693,7 +701,7 @@ button {
 }
 
 .story-actions-label {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -726,7 +734,7 @@ button {
 
 /* Error */
 .story-error {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.85rem;
   color: var(--color-error);
   margin-top: 1rem;
@@ -788,7 +796,7 @@ button {
 }
 
 .about-label {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -797,7 +805,7 @@ button {
 }
 
 .about-title {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -807,14 +815,14 @@ button {
 }
 
 .about-title em {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-weight: 400;
   color: var(--color-primary);
 }
 
 .about-subtitle {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.25rem;
   line-height: 1.7;
   color: var(--color-subtext);
@@ -875,7 +883,7 @@ button {
 }
 
 .about-badge-number {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 2.25rem;
   font-weight: 700;
   color: #3b5847;
@@ -883,7 +891,7 @@ button {
 }
 
 .about-badge-label {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -906,7 +914,7 @@ button {
 }
 
 .about-vision-heading h2 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-text);
@@ -921,7 +929,7 @@ button {
 }
 
 .about-vision-content p {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
   line-height: 1.8;
   color: var(--color-subtext);
@@ -929,7 +937,7 @@ button {
 }
 
 .about-quote {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.6;
@@ -962,11 +970,11 @@ button {
 }
 
 .about-value-card--alt {
-  background-color: #e1e3e0;
+  background-color: var(--color-surface-high);
 }
 
 .about-value-card h3 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
@@ -974,7 +982,7 @@ button {
 }
 
 .about-value-card p {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--color-subtext);
   margin: 0;
@@ -1001,7 +1009,7 @@ button {
 }
 
 .about-cta h2 {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
@@ -1010,7 +1018,7 @@ button {
 }
 
 .about-cta p {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.1rem;
   color: rgba(230, 255, 237, 0.8);
   margin: 0 auto 2.5rem;
@@ -1032,7 +1040,7 @@ button {
 }
 
 .about-cta-btn {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1136,7 +1144,7 @@ button {
   position: absolute;
   bottom: -1.5rem;
   right: -1.5rem;
-  background-color: #e1e3e0;
+  background-color: var(--color-surface-high);
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 20px 40px -20px rgba(48, 51, 49, 0.1);
@@ -1150,7 +1158,7 @@ button {
 }
 
 .notfound-badge-number {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 3.5rem;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -1175,7 +1183,7 @@ button {
 }
 
 .notfound-label {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -1184,7 +1192,7 @@ button {
 }
 
 .notfound-title {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -1194,14 +1202,14 @@ button {
 }
 
 .notfound-title em {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-weight: 400;
   color: var(--color-primary);
 }
 
 .notfound-subtitle {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-size: 1.2rem;
   line-height: 1.7;
   color: var(--color-subtext);
@@ -1227,7 +1235,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 1rem 2rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.8rem;
   font-weight: 700;
   border-radius: 0.25rem;
@@ -1254,7 +1262,7 @@ button {
 }
 
 .notfound-btn--secondary:hover {
-  background-color: #e1e3e0;
+  background-color: var(--color-surface-high);
 }
 
 /* Suggestions */
@@ -1266,7 +1274,7 @@ button {
 }
 
 .notfound-suggestion-heading {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-headline);
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -1285,7 +1293,7 @@ button {
 }
 
 .notfound-suggestion-col ul li a {
-  font-family: "Newsreader", serif;
+  font-family: var(--font-body);
   font-style: italic;
   font-size: 0.9rem;
   color: var(--color-primary);
