@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router";
 import { fetchStories } from "./services/storyService";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import HomePage from "./pages/home";
 import StoryPage from "./pages/story";
 import AboutPage from "./pages/about";
