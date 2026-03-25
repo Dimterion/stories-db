@@ -6,7 +6,7 @@ import HomePage from "./pages/home";
 import StoryPage from "./pages/story";
 import AboutPage from "./pages/about";
 import NotFoundPage from "./pages/notFound";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 const LIMIT_OPTIONS = [4, 8, 12];
 
