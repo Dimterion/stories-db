@@ -11,6 +11,14 @@ export default function StoryPage() {
   const [story, setStory] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [copied, setCopied] = useState(false);
+
+  function handleShare() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
 
   useEffect(() => {
     async function loadStory() {
@@ -89,8 +97,12 @@ export default function StoryPage() {
             <div className="story-actions">
               <p className="story-actions-label">Share this story</p>
               <div className="story-actions-buttons">
-                <button className="story-action-btn" aria-label="Share">
-                  ↗
+                <button
+                  className="story-action-btn"
+                  aria-label="Copy link"
+                  onClick={handleShare}
+                >
+                  {copied ? "✓" : "↗"}
                 </button>
                 <button className="story-action-btn" aria-label="Bookmark">
                   ♡

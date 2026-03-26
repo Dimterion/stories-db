@@ -601,6 +601,7 @@ button {
 .story-actions-buttons {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .story-action-btn {
@@ -1167,7 +1168,11 @@ button {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
   color: var(--color-tertiary);
   font-size: 1rem;
   border: none;
@@ -1176,7 +1181,9 @@ button {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 16px rgba(72, 102, 84, 0.25);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .scroll-to-top-btn:hover {
