@@ -226,7 +226,7 @@ button {
   margin-bottom: 3rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   .home-controls {
     flex-direction: row;
     align-items: flex-end;
@@ -377,8 +377,6 @@ button {
 @media (min-width: 768px) {
   .story-card--featured {
     grid-column: span 8;
-    border-bottom: none;
-    border-right: none;
   }
 
   .story-card--featured .story-card-title {
@@ -427,10 +425,7 @@ button {
   height: 180px;
   object-fit: cover;
   display: block;
-  filter: grayscale(0.8);
-  transition:
-    transform 0.5s ease,
-    filter 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 /* STORY PAGE */
@@ -648,16 +643,18 @@ button {
 
 .story-hero-image-tag {
   width: 100%;
+  max-width: 90vw;
   max-height: 360px;
+  margin: auto;
   object-fit: cover;
   border-radius: 0.5rem;
   display: block;
-  filter: grayscale(0.9);
-  transition: filter 0.7s ease;
 }
 
-.story-hero-image-tag:hover {
-  filter: grayscale(0);
+@media (min-width: 768px) {
+  .story-hero-image-tag {
+    max-width: 750px;
+  }
 }
 
 /* ABOUT PAGE */
