@@ -669,9 +669,9 @@ button {
 .about-hero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: start;
-  margin-bottom: 6rem;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -723,22 +723,25 @@ button {
 
 .about-hero-image-wrapper {
   position: relative;
-  margin-top: 3rem;
-}
-
-@media (min-width: 1024px) {
-  .about-hero-image-wrapper {
-    margin-top: 0;
-  }
 }
 
 .about-hero-image-frame {
+  max-width: 500px;
+  max-height: 500px;
+  margin: auto;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 0.5rem;
   transform: rotate(2deg);
   transition: transform 0.5s ease;
   box-shadow: 0 20px 40px rgba(48, 51, 49, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .about-hero-image-frame {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 .about-hero-image-frame:hover {
@@ -767,7 +770,7 @@ button {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .about-hero-badge {
     display: block;
   }
@@ -794,7 +797,7 @@ button {
 .about-vision {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: 2rem;
   padding: 2rem 0;
 }
 
@@ -845,7 +848,7 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -882,7 +885,7 @@ button {
 
 /* CTA */
 .about-cta {
-  margin-top: 6rem;
+  margin-top: 5rem;
   padding: 4rem 2rem;
   background: linear-gradient(
     135deg,
