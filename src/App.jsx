@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router";
 import { fetchStories } from "./services/storyService";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/home";
 import StoryPage from "./pages/story";
@@ -46,6 +47,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <ScrollToTopBtn />
       <Header />
       <div className="app-content">
         <Routes>
