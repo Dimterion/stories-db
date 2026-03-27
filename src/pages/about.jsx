@@ -21,10 +21,7 @@ export default function AboutPage() {
 
         <div className="about-hero-image-wrapper">
           <div className="about-hero-image-frame">
-            <img
-              src={aboutPageImg}
-              alt="A circle with a signature."
-            />
+            <img src={aboutPageImg} alt="A circle with a signature." />
           </div>
           <div className="about-hero-badge">
             <p className="about-badge-number">10+</p>
@@ -80,18 +77,25 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="about-cta">
-        <h2>Lorem Ipsum</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
-          ullam.
-        </p>
+        <h2>Contacts</h2>
+        <p>Visit my main site or view my other profiles.</p>
         <div className="about-cta-buttons">
-          <button className="about-cta-btn about-cta-btn--primary">
-            Lorem
-          </button>
-          <button className="about-cta-btn about-cta-btn--outline">
-            Ipsum
-          </button>
+          <a
+            href="https://www.dimterion.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about-cta-btn about-cta-btn--primary"
+          >
+            Personal Site
+          </a>
+          <a
+            href="https://linktr.ee/dimterion"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="about-cta-btn about-cta-btn--outline"
+          >
+            Profile links
+          </a>
         </div>
       </section>
     </main>

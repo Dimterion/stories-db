@@ -16,9 +16,14 @@ export default function Footer() {
           <Link to="/" className="footer-link">
             Archive
           </Link>
-          <Link to="/" className="footer-link">
+          <a
+            href="https://www.dimterion.com/contact"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-link"
+          >
             Contact
-          </Link>
+          </a>
         </nav>
       </div>
     </footer>
