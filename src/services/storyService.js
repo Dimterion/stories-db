@@ -1,5 +1,6 @@
 import sampleStories from "../assets/sampleStories.json";
 import sampleStory from "../assets/sampleStory.json";
+import { storyImages } from "../assets/images/imgImport";
 
 // TO-DO: adjust variables when API is ready.
 // Example API structure:
@@ -13,7 +14,14 @@ const STORIES_API_URL = import.meta.env.VITE_STORIES_API_URL;
 const STORY_API_URL = import.meta.env.VITE_STORY_API_URL;
 
 export async function fetchStories() {
-  if (USE_LOCAL_DATA) return Promise.resolve(sampleStories);
+  if (USE_LOCAL_DATA) {
+    const stories = sampleStories.map((story) => ({
+      ...story,
+      image: story.image ?? storyImages[story.slug] ?? null,
+    }));
+
+    return Promise.resolve(stories);
+  }
 
   const res = await fetch(STORIES_API_URL);
 
@@ -28,7 +36,10 @@ export async function fetchStory(slug) {
 
     if (!story) throw new Error("Story not found.");
 
-    return Promise.resolve(story);
+    return Promise.resolve({
+      ...story,
+      image: story.image ?? storyImages[story.slug] ?? null,
+    });
   }
 
   const res = await fetch(`${STORY_API_URL}/${slug}`);
