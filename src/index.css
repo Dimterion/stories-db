@@ -675,7 +675,7 @@ button {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .about-hero {
     grid-template-columns: 7fr 5fr;
   }
@@ -724,6 +724,7 @@ button {
 
 .about-hero-image-wrapper {
   position: relative;
+  margin-top: 1rem;
 }
 
 .about-hero-image-frame {
@@ -766,12 +767,12 @@ button {
   bottom: -2rem;
   left: -2rem;
   background-color: #c9ead4;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .about-hero-badge {
     display: block;
   }

@@ -1,24 +1,29 @@
+import aboutPageImg from "../assets/images/about-page-img.jpg";
+
 export default function AboutPage() {
   return (
     <main className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
         <div className="about-hero-text">
-          <span className="about-label">Stories DB</span>
+          <span className="about-label">Dimterion's Stories</span>
           <h1 className="about-title">
-            A collection of <em>stories</em> to read.
+            A collection of <em>stories</em> written by me.
           </h1>
           <p className="about-subtitle">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
-            ullam.
+            I've made this little site to store various stories that I wrote.
+            Maybe they are far from ideal, not quite polished, and has already
+            been posted somewhere else, but sometimes you just need a bit of
+            motivation to start doing something, like creating this site or
+            writing stories. So here it is.
           </p>
         </div>
 
         <div className="about-hero-image-wrapper">
           <div className="about-hero-image-frame">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-8K01jOIeqvTuWhpHr21vl5_7igkFN4GgImdp9-GhJnd3W7H4U3I1HgY8nzKBQGcNdzY_Ergm9sibkULGYIS1ms-Mk4EaNZ10XUEmSWu-fJRrLRYx5ZpRJbk2dxYrKGSM6rj-wsqZ8gS6yIyBbiKhuyd3o2g1lRh8_M9VkSLDYZq9DKbbxkB4X-ojK55trVpbaBh0Cy8d6tN5VeK78uasqj-X0IudnxED8l8o8x_urCXV489DPH_Q28PJemSyyAYubNt3R0PA073N"
-              alt="Ancient books and a fountain pen on a desk"
+              src={aboutPageImg}
+              alt="A circle with a signature."
             />
           </div>
           <div className="about-hero-badge">
