@@ -24,8 +24,8 @@ export default function AboutPage() {
             <img src={aboutPageImg} alt="A circle with a signature." />
           </div>
           <div className="about-hero-badge">
-            <p className="about-badge-number">10+</p>
-            <p className="about-badge-label">Archived Works</p>
+            <p className="about-badge-number">15+</p>
+            <p className="about-badge-label">Stories to read</p>
           </div>
         </div>
       </section>
@@ -33,35 +33,38 @@ export default function AboutPage() {
       {/* Vision Section */}
       <section className="about-vision">
         <div className="about-vision-heading">
-          <h2>The Vision</h2>
+          <h2>About me</h2>
         </div>
         <div className="about-vision-content">
+          <p>I'm a developer who likes writing both code and stories.</p>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
-            ullam.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
-            ullam.
+            Combining these couple of little passions of mine, I do both every
+            day.
           </p>
 
           <blockquote className="about-quote">
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Obcaecati, ullam."
+            This site stores all kinds of stories of various genres and topics.
           </blockquote>
 
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
-            ullam.
+            I also have a blog on Medium where I write every Friday about coding
+            and development in general.
           </p>
 
           {/* Values Grid */}
           <div className="about-values">
             <div className="about-value-card">
-              <h3>Lorem</h3>
+              <h3>Medium blog</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Obcaecati, ullam.
+                Here is a link to my{" "}
+                <a
+                  href="https://medium.com/@dimterion"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Medium blog
+                </a>
+                .
               </p>
             </div>
             <div className="about-value-card about-value-card--alt">

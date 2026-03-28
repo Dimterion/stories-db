@@ -888,6 +888,14 @@ button {
   line-height: 1.6;
 }
 
+.about-value-card a {
+  text-decoration: underline;
+}
+
+.about-value-card a:hover {
+  color: var(--color-primary);
+}
+
 /* CTA */
 .about-cta {
   margin-top: 5rem;
