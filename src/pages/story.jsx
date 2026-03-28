@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { fetchStory } from "../services/storyService";
 import Loader from "../components/Loader";
 import FallbackImage from "../components/FallbackImage";
+import { CheckIcon, CopyIcon } from "../components/Icons";
 
 export default function StoryPage() {
   const { slug } = useParams();
@@ -102,7 +103,7 @@ export default function StoryPage() {
                   aria-label="Copy link"
                   onClick={handleShare}
                 >
-                  {copied ? "✓" : "↗"}
+                  {copied ? <CheckIcon /> : <CopyIcon />}
                 </button>
                 <button className="story-action-btn" aria-label="Bookmark">
                   ♡
