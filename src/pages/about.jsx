@@ -63,15 +63,22 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                 >
                   Medium blog
-                </a>
-                .
+                </a>{" "}
+                (tech, web development, and coding-related content mostly).
               </p>
             </div>
             <div className="about-value-card about-value-card--alt">
-              <h3>Ipsum</h3>
+              <h3>Questions?</h3>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Obcaecati, ullam.
+                You can contact me via{" "}
+                <a
+                  href="https://www.dimterion.com/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  this form
+                </a>{" "}
+                (or, frankly, anywhere you want throughout my profiles).
               </p>
             </div>
           </div>
