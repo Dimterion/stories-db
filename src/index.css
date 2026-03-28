@@ -59,6 +59,9 @@ button {
 
 .app-content {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* SHARED CONTROLS */
@@ -970,7 +973,6 @@ button {
 /* NOT FOUND PAGE */
 /* Layout */
 .notfound-page {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1019,10 +1021,6 @@ button {
   object-fit: cover;
   opacity: 0.8;
   transition: transform 0.7s ease;
-}
-
-.notfound-image-frame:hover img {
-  transform: scale(1.05);
 }
 
 .notfound-image-overlay {
@@ -1150,15 +1148,6 @@ button {
 
 .notfound-btn--primary:hover {
   opacity: 0.9;
-}
-
-.notfound-btn--secondary {
-  background-color: #e7e8e6;
-  color: var(--color-text);
-}
-
-.notfound-btn--secondary:hover {
-  background-color: var(--color-surface-high);
 }
 
 .scroll-to-top-btn {

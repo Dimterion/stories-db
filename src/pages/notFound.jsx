@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import notFoundPageImg from "../assets/images/not-found-page.jpg";
 
 export default function NotFoundPage() {
   return (
@@ -7,10 +8,7 @@ export default function NotFoundPage() {
         {/* Left: Image */}
         <div className="notfound-image-col">
           <div className="notfound-image-frame">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGf4dfn7KeoM4AEn6T-TlXjqloFklAEludRuvP-zjqAVrrL0TQ_lzUfVWJMcMBKxPYZDPCXr59duRqJxpryRiKdoK9mGHfsJPTlFr20T1Df9YlNNwJNLU54rXsf7UshcZozAZe8A2ZYcnXtQtpXmNb2rLPyL-wGJl_KWGCFTkBR_3jLoxHSFBScksRXj1Ju8BytsHFZ7akTSUNpub8xMTMsFV6tBc2qjTjkrooElR_HODGdR7ajYIYPaHzqgetgJx6pGa963gWeg_F"
-              alt="An old library shelf with a single missing book"
-            />
+            <img src={notFoundPageImg} alt="An empty bookshelf" />
             <div className="notfound-image-overlay" />
           </div>
           <div className="notfound-badge">
@@ -20,23 +18,20 @@ export default function NotFoundPage() {
 
         {/* Right: Content */}
         <div className="notfound-content-col">
-          <span className="notfound-label">Database Entry Missing</span>
+          <span className="notfound-label">Page does not exist</span>
           <h1 className="notfound-title">
             The page has <br />
             <em>wandered off.</em>
           </h1>
 
           <p className="notfound-subtitle">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati,
-            ullam.
+            Please check the link you are trying to access, refresh the page, or
+            come back later.
           </p>
 
           <div className="notfound-buttons">
             <Link to="/" className="notfound-btn notfound-btn--primary">
-              Return to Homepage
-            </Link>
-            <Link to="/" className="notfound-btn notfound-btn--secondary">
-              Search Stories
+              Return to Home page
             </Link>
           </div>
 
