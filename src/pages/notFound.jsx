@@ -37,24 +37,19 @@ export default function NotFoundPage() {
 
           <div className="notfound-suggestions">
             <div className="notfound-suggestion-col">
-              <h4 className="notfound-suggestion-heading">Lorem</h4>
+              <h4 className="notfound-suggestion-heading">Questions?</h4>
               <ul>
                 <li>
-                  <Link to="/">Ipsum</Link>
+                  <a
+                    href="https://www.dimterion.com/contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Contact form
+                  </a>
                 </li>
                 <li>
-                  <Link to="/">Dolor</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="notfound-suggestion-col">
-              <h4 className="notfound-suggestion-heading">Need Help?</h4>
-              <ul>
-                <li>
-                  <Link to="/">Contact</Link>
-                </li>
-                <li>
-                  <Link to="/">Feedback</Link>
+                  <Link to="/about">About page</Link>
                 </li>
               </ul>
             </div>

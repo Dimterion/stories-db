@@ -14,7 +14,7 @@ export default function Footer() {
 
         <nav className="footer-links">
           <Link to="/" className="footer-link">
-            Archive
+            Stories
           </Link>
           <a
             href="https://www.dimterion.com/contact"
