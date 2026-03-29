@@ -96,18 +96,20 @@ export default function StoryPage() {
 
             {/* Footer Actions */}
             <div className="story-actions">
-              <p className="story-actions-label">Share this story</p>
+              <p className="story-actions-label">Share</p>
               <div className="story-actions-buttons">
-                <button
-                  className="story-action-btn"
-                  aria-label="Copy link"
-                  onClick={handleShare}
-                >
-                  {copied ? <CheckIcon /> : <CopyIcon />}
-                </button>
-                <button className="story-action-btn" aria-label="Bookmark">
-                  ♡
-                </button>
+                <div className="story-action-btn-wrapper">
+                  <button
+                    className="story-action-btn"
+                    aria-label="Copy link"
+                    onClick={handleShare}
+                  >
+                    {copied ? <CheckIcon /> : <CopyIcon />}
+                  </button>
+                  <span className="story-action-btn-label">
+                    {copied ? "Link copied!" : ""}
+                  </span>
+                </div>
               </div>
             </div>
           </>

@@ -1,4 +1,4 @@
-export const CopyIcon = ({ size = 16, color = "currentColor" }) => (
+export const CopyIcon = ({ size = 16, color = "currentColor", className }) => (
   <svg
     width={size}
     height={size}
@@ -8,13 +8,15 @@ export const CopyIcon = ({ size = 16, color = "currentColor" }) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
   >
     <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
     <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
   </svg>
 );
 
-export const CheckIcon = ({ size = 16, color = "green" }) => (
+export const CheckIcon = ({ size = 16, color = "green", className }) => (
   <svg
     width={size}
     height={size}
@@ -24,6 +26,8 @@ export const CheckIcon = ({ size = 16, color = "green" }) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    className={className}
+    aria-hidden="true"
   >
     <polyline points="20 6 9 17 4 12" />
   </svg>
