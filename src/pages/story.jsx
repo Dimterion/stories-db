@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { fetchStory } from "../services/storyService";
 import Loader from "../components/Loader";
 import FallbackImage from "../components/FallbackImage";
-import { CheckIcon, CopyIcon } from "../components/Icons";
+import { ArrowLeftIcon, CheckIcon, CopyIcon } from "../components/Icons";
 
 export default function StoryPage() {
   const { slug } = useParams();
@@ -45,7 +45,7 @@ export default function StoryPage() {
         {/* Header area — always visible */}
         <div className="story-header">
           <Link to="/" className="story-back">
-            ← Back to Home
+            <ArrowLeftIcon /> Back to Home
           </Link>
 
           {loading && <Loader />}

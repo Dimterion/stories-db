@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { ArrowRightIcon } from "./Icons";
 import FallbackImage from "./FallbackImage";
 
 export default function StoryCard({ story, index }) {
@@ -26,7 +27,9 @@ export default function StoryCard({ story, index }) {
         </div>
         <h2 className="story-card-title">{story.title}</h2>
         <p className="story-card-excerpt">{story.excerpt}</p>
-        <span className="story-card-cta">Read →</span>
+        <span className="story-card-cta">
+          Read <ArrowRightIcon />
+        </span>
       </Link>
     </article>
   );
