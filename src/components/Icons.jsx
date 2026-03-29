@@ -16,7 +16,7 @@ export const CopyIcon = ({ size = 16, color = "currentColor", className }) => (
   </svg>
 );
 
-export const CheckIcon = ({ size = 16, color = "green", className }) => (
+export const CheckIcon = ({ size = 16, color = "currentColor", className }) => (
   <svg
     width={size}
     height={size}
