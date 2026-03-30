@@ -43,6 +43,9 @@
 }
 
 .footer-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
   font-family: var(--font-headline);
   font-size: 0.65rem;
   letter-spacing: 0.1em;

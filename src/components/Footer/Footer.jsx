@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { CopyrightIcon } from "../Icons";
 import "./footer.css";
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footer-brand">
           <span className="footer-logo">Dimterion's Stories</span>
           <span className="footer-copy">
-            &copy; {new Date().getFullYear()} Stories.
+            <CopyrightIcon size={10} /> {new Date().getFullYear()} Stories.
           </span>
         </div>
 

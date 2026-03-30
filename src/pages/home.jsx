@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import Loader from "../components/Loader";
 import FilterInput from "../components/FilterInput";
 import LimitSelector from "../components/LimitSelector";
@@ -42,12 +43,14 @@ export default function HomePage({
       {/* Hero */}
       <section className="home-hero">
         <h1 className="home-hero-title">
-          The Database of <br />
+          A collection of
+          <br />
           <em>Stories</em>
         </h1>
         <p className="home-hero-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-          voluptates!
+          Hi! Thanks for visiting. If you want to check some of the stories I've
+          written, take a look at the list below. For more information or links
+          visit the <Link to="/about">About</Link> page.
         </p>
       </section>
 

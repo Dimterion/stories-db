@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ArrowUpIcon } from "./Icons";
 
 export default function ScrollToTopBtn() {
   const [visible, setVisible] = useState(false);
@@ -24,7 +25,7 @@ export default function ScrollToTopBtn() {
       onClick={handleClick}
       aria-label="Scroll to top"
     >
-      ↑
+      <ArrowUpIcon />
     </button>
   );
 }
