@@ -48,7 +48,7 @@ export default function StoryPage() {
             <ArrowLeftIcon /> Back to Home
           </Link>
 
-          {loading && <Loader />}
+          {loading && <Loader size="lg" />}
           {error && <p className="story-error">Error: {error}</p>}
           {!loading && !error && !story && (
             <p className="story-error">Story not found.</p>

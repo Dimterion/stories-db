@@ -435,7 +435,7 @@ button {
 
 .story-card-image {
   width: 100%;
-  height: 180px;
+  height: 256px;
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
@@ -1284,4 +1284,18 @@ button {
     border-color: var(--color-primary);
     opacity: 0.4;
   }
+}
+
+.loader--sm .loader-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.loader--md .loader-spinner {
+  width: 2rem;
+  height: 2rem;
+}
+.loader--lg .loader-spinner {
+  width: 3rem;
+  height: 3rem;
+  border-width: 3px;
 }
