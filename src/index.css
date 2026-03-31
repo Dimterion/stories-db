@@ -1254,3 +1254,34 @@ button {
 .notfound-suggestion-col ul li a:hover {
   text-decoration: underline;
 }
+
+/* Loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.loader-spinner {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgba(72, 102, 84, 0.15);
+  border-top-color: var(--color-primary);
+  animation: loader-spin 0.75s linear infinite;
+}
+
+@keyframes loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loader-spinner {
+    animation: none;
+    border-color: var(--color-primary);
+    opacity: 0.4;
+  }
+}
