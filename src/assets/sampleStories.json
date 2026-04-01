@@ -4,6 +4,7 @@
     "slug": "story-one",
     "title": "Story One",
     "date": "2024-01-15",
+    "featured": true,
     "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
   {

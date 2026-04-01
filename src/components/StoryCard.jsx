@@ -20,7 +20,7 @@ export default function StoryCard({
             className="story-card-image"
           />
           <div className="story-card-badge-wrapper">
-            {isLatest && (
+            {isLatest && !isFeatured && (
               <span className="story-card-badge" aria-label="Latest story">
                 Latest
               </span>
