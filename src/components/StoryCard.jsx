@@ -2,15 +2,14 @@ import { Link } from "react-router";
 import { ArrowRightIcon } from "./Icons";
 import FallbackImage from "./FallbackImage";
 
-export default function StoryCard({ story, index }) {
-  const isFeatured = index === 0;
-  const isOffset = index === 2;
-
+export default function StoryCard({
+  story,
+  isFeatured = false,
+  isLatest = false,
+}) {
   return (
     <article
-      className={`story-card ${
-        isFeatured ? "story-card--featured" : "story-card--regular"
-      } ${isOffset ? "story-card--offset" : ""}`}
+      className={`story-card ${isFeatured ? "story-card--featured" : "story-card--regular"}`}
     >
       <Link to={`/story/${story.slug}`} className="story-card-link">
         {/* Optional thumbnail at top */}
@@ -20,6 +19,18 @@ export default function StoryCard({ story, index }) {
             alt={story.title}
             className="story-card-image"
           />
+          <div className="story-card-badge-wrapper">
+            {isLatest && (
+              <span className="story-card-badge" aria-label="Latest story">
+                Latest
+              </span>
+            )}
+            {isFeatured && (
+              <span className="story-card-badge" aria-label="Featured story">
+                Featured
+              </span>
+            )}
+          </div>
         </div>
 
         <div className="story-card-meta">

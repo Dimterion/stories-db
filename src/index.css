@@ -320,6 +320,10 @@ button {
 
 /* STORY CARD */
 /* Base card */
+.story-card {
+  position: relative;
+}
+
 .story-card-link {
   display: flex;
   flex-direction: column;
@@ -418,16 +422,9 @@ button {
   }
 }
 
-/* Offset card (third card) */
-@media (min-width: 768px) {
-  /* TO-DO: add special styling if needed. */
-  .story-card--offset {
-    margin-top: auto;
-  }
-}
-
 /* Card image */
 .story-card-image-wrapper {
+  position: relative;
   width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -441,6 +438,28 @@ button {
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
+}
+
+.story-card-badge-wrapper {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.story-card-badge {
+  background-color: var(--color-primary);
+  color: var(--color-tertiary);
+  font-family: var(--font-headline);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.75rem;
+  pointer-events: none;
 }
 
 /* STORY PAGE */
@@ -767,7 +786,6 @@ button {
   overflow: hidden;
   border-radius: 0.5rem;
   transform: rotate(2deg);
-  transition: transform 0.5s ease;
   box-shadow: 0 20px 40px rgba(48, 51, 49, 0.1);
 }
 

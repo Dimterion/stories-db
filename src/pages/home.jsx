@@ -18,6 +18,10 @@ export default function HomePage({
   loading,
   error,
 }) {
+  const featuredStory =
+    stories.find((s) => s.featured) ??
+    [...stories].sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+
   const allFilteredStories = stories
     .filter((story) => story.title.toLowerCase().includes(filter.toLowerCase()))
     .slice()
@@ -35,7 +39,14 @@ export default function HomePage({
           return 0;
       }
     });
-  const visibleStories = allFilteredStories.slice(0, limit);
+
+  const featured = allFilteredStories.find((s) => s.id === featuredStory?.id);
+  const rest = allFilteredStories.filter((s) => s.id !== featured?.id);
+  const orderedStories = featured ? [featured, ...rest] : rest;
+  const latestStory = [...stories].sort(
+    (a, b) => new Date(b.date) - new Date(a.date),
+  )[0];
+  const visibleStories = orderedStories.slice(0, limit);
   const hasMore = limit < allFilteredStories.length;
 
   return (
@@ -77,8 +88,13 @@ export default function HomePage({
         <>
           <section className="home-grid">
             {visibleStories.length > 0 ? (
-              visibleStories.map((story, index) => (
-                <StoryCard key={story.id} story={story} index={index} />
+              visibleStories.map((story) => (
+                <StoryCard
+                  key={story.id}
+                  story={story}
+                  isFeatured={story.id === featured?.id}
+                  isLatest={story.id === latestStory?.id}
+                />
               ))
             ) : (
               <p className="home-empty">No matching stories.</p>
