@@ -24,7 +24,7 @@ export default function AboutPage() {
             <img src={aboutPageImg} alt="A circle with a signature." />
           </div>
           <div className="about-hero-badge">
-            <p className="about-badge-number">15+</p>
+            <p className="about-badge-number">10+</p>
             <p className="about-badge-label">Stories to read</p>
           </div>
         </div>
