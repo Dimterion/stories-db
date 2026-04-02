@@ -1,7 +1,14 @@
 import { Link } from "react-router";
+import { useMetadata } from "../services/hooks";
 import notFoundPageImg from "../assets/images/not-found-page.jpg";
+import { DEFAULT_DESCRIPTION } from "../services/Metadata/MetadataProvider";
 
 export default function NotFoundPage() {
+  useMetadata({
+    title: "Page not found | Stories",
+    description: DEFAULT_DESCRIPTION,
+  });
+
   return (
     <main className="notfound-page">
       <div className="notfound-grid">

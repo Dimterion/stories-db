@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
+import { useMetadata } from "../services/hooks";
 import { fetchStory } from "../services/storyService";
 import Loader from "../components/Loader";
 import FallbackImage from "../components/FallbackImage";
 import { ArrowLeftIcon, CheckIcon, CopyIcon } from "../components/Icons";
+import { DEFAULT_DESCRIPTION } from "../services/Metadata/MetadataProvider";
 
 export default function StoryPage() {
   const { slug } = useParams();
@@ -13,6 +15,11 @@ export default function StoryPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [copied, setCopied] = useState(false);
+
+  useMetadata({
+    title: story ? `${story.title}` : "Stories",
+    description: story?.excerpt ?? DEFAULT_DESCRIPTION,
+  });
 
   function handleShare() {
     navigator.clipboard.writeText(window.location.href).then(() => {
