@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { MetadataContext } from "./MetadataContext";
 
 export const DEFAULT_TITLE = "Stories";
-export const DEFAULT_DESCRIPTION = "A collection of stories written by Dimterion.";
+export const DEFAULT_DESCRIPTION =
+  "A collection of stories written by Dimterion.";
 
 export function MetadataProvider({ children }) {
   const [metadata, setMetadata] = useState({
@@ -21,6 +22,14 @@ export function MetadataProvider({ children }) {
     }
 
     meta.setAttribute("content", metadata.description || DEFAULT_DESCRIPTION);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", window.location.href);
   }, [metadata]);
 
   return (
