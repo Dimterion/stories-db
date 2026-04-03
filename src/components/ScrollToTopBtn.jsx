@@ -6,7 +6,7 @@ export default function ScrollToTopBtn() {
 
   useEffect(() => {
     function handleScroll() {
-      setVisible(window.scrollY > 0);
+      setVisible(window.scrollY > 300);
     }
 
     window.addEventListener("scroll", handleScroll);

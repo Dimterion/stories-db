@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Link } from "react-router";
 import { useMetadata } from "../services/hooks";
 import Loader from "../components/Loader";
@@ -28,9 +29,12 @@ export default function HomePage({
     description: DEFAULT_DESCRIPTION,
   });
 
-  const featuredStory =
-    stories.find((s) => s.featured) ??
-    [...stories].sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+  const featuredStory = useMemo(
+    () =>
+      stories.find((s) => s.featured) ??
+      [...stories].sort((a, b) => new Date(b.date) - new Date(a.date))[0],
+    [stories],
+  );
 
   const allFilteredStories = stories
     .filter((story) => story.title.toLowerCase().includes(filter.toLowerCase()))
@@ -53,9 +57,10 @@ export default function HomePage({
   const featured = allFilteredStories.find((s) => s.id === featuredStory?.id);
   const rest = allFilteredStories.filter((s) => s.id !== featured?.id);
   const orderedStories = featured ? [featured, ...rest] : rest;
-  const latestStory = [...stories].sort(
-    (a, b) => new Date(b.date) - new Date(a.date),
-  )[0];
+  const latestStory = useMemo(
+    () => [...stories].sort((a, b) => new Date(b.date) - new Date(a.date))[0],
+    [stories],
+  );
   const visibleStories = orderedStories.slice(0, limit);
   const hasMore = limit < allFilteredStories.length;
 

@@ -1,11 +1,11 @@
 import { useMetadata } from "../services/hooks";
 import aboutPageImg from "../assets/images/about-page-img.jpg";
-import { DEFAULT_DESCRIPTION } from "../services/Metadata/MetadataProvider";
 
 export default function AboutPage() {
   useMetadata({
     title: "About | Stories",
-    description: DEFAULT_DESCRIPTION,
+    description:
+      "Learn more about Dimterion and the stories written on this site.",
   });
 
   return (
