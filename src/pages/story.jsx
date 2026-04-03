@@ -6,7 +6,10 @@ import { fetchStory } from "../services/storyService";
 import Loader from "../components/Loader";
 import FallbackImage from "../components/FallbackImage";
 import { ArrowLeftIcon, CheckIcon, CopyIcon } from "../components/Icons";
-import { DEFAULT_DESCRIPTION } from "../services/Metadata/MetadataProvider";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+} from "../services/Metadata/MetadataProvider";
 
 export default function StoryPage() {
   const { slug } = useParams();
@@ -17,7 +20,7 @@ export default function StoryPage() {
   const [copied, setCopied] = useState(false);
 
   useMetadata({
-    title: story ? `${story.title}` : "Stories",
+    title: story ? `${story.title} | ${DEFAULT_TITLE}` : DEFAULT_TITLE,
     description: story?.excerpt ?? DEFAULT_DESCRIPTION,
   });
 
@@ -64,7 +67,7 @@ export default function StoryPage() {
           {!loading && !error && story && (
             <>
               {/* Tags */}
-              {story.tags.length > 0 && (
+              {story.tags?.length > 0 && (
                 <div className="story-tags">
                   {story.tags.map((tag) => (
                     <span key={tag} className="story-tag">

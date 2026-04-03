@@ -18,6 +18,8 @@ export default function FallbackImage({ src, alt, className }) {
       alt={alt}
       onError={handleError}
       className={className}
+      loading="lazy"
+      decoding="async"
     />
   );
 }
