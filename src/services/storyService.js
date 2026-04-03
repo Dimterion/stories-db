@@ -32,7 +32,7 @@ export async function fetchStories() {
 
 export async function fetchStory(slug) {
   if (USE_LOCAL_DATA) {
-    const story = Object.values(sampleStory).find((s) => s.slug === slug);
+    const story = sampleStory.find((s) => s.slug === slug);
 
     if (!story) throw new Error("Story not found.");
 
