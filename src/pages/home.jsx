@@ -1,9 +1,14 @@
 import { Link } from "react-router";
+import { useMetadata } from "../services/hooks";
 import Loader from "../components/Loader";
 import FilterInput from "../components/FilterInput";
 import LimitSelector from "../components/LimitSelector";
 import SortSelector from "../components/SortSelector";
 import StoryCard from "../components/StoryCard";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+} from "../services/Metadata/MetadataProvider";
 
 export default function HomePage({
   stories,
@@ -18,6 +23,11 @@ export default function HomePage({
   loading,
   error,
 }) {
+  useMetadata({
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+  });
+
   const featuredStory =
     stories.find((s) => s.featured) ??
     [...stories].sort((a, b) => new Date(b.date) - new Date(a.date))[0];

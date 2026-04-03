@@ -14,10 +14,11 @@ export function MetadataProvider({ children }) {
   useEffect(() => {
     document.title = metadata.title || DEFAULT_TITLE;
 
-    let meta = document.querySelector('meta[name="description"]');
+    let meta = document.getElementById("meta-description");
     if (!meta) {
       meta = document.createElement("meta");
       meta.name = "description";
+      meta.id = "meta-description";
       document.head.appendChild(meta);
     }
 
