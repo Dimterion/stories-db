@@ -42,9 +42,13 @@ export async function fetchStory(slug) {
     });
   }
 
-  const res = await fetch(`${STORY_API_URL}/${slug}`);
-
+  const res = await fetch(STORY_API_URL);
   if (!res.ok) throw new Error("Could not fetch story.");
 
-  return res.json();
+  const stories = await res.json();
+  const story = stories.find((s) => s.slug === slug);
+
+  if (!story) throw new Error("Story not found.");
+
+  return story;
 }
