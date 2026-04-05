@@ -19,10 +19,10 @@ export default function AboutPage() {
           </h1>
           <p className="about-subtitle">
             I've made this little site to store various stories that I wrote.
-            Maybe they are far from ideal, not quite polished, and has already
-            been posted somewhere else, but sometimes you just need a bit of
-            motivation to start doing something, like creating this site or
-            writing stories. So here it is.
+            They may be far from ideal, not quite polished, and already posted
+            somewhere else, but sometimes you just need a bit of motivation to
+            start doing something, like creating this site or writing stories.
+            So here it is.
           </p>
         </div>
 
@@ -45,17 +45,18 @@ export default function AboutPage() {
         <div className="about-vision-content">
           <p>I'm a developer who likes writing both code and stories.</p>
           <p>
-            Combining these couple of little passions of mine, I do both every
-            day.
+            Combining these couple of passions of mine, I do both every
+            day for several years already.
           </p>
 
           <blockquote className="about-quote">
-            This site stores all kinds of stories of various genres and topics.
+            This site stores all kinds of stories of various genres and topics
+            like a tiny library.
           </blockquote>
 
           <p>
-            I also have a blog on Medium where I write every Friday about coding
-            and development in general.
+            I also have a blog on Medium, where I write every Friday about
+            programming and development in general.
           </p>
 
           {/* Values Grid */}
@@ -71,7 +72,8 @@ export default function AboutPage() {
                 >
                   Medium blog
                 </a>{" "}
-                (tech, web development, and coding-related content mostly).
+                (200+ posts; tech, web development, and coding-related content
+                mostly).
               </p>
             </div>
             <div className="about-value-card about-value-card--alt">
@@ -85,7 +87,8 @@ export default function AboutPage() {
                 >
                   this form
                 </a>{" "}
-                (or, frankly, anywhere you want throughout my profiles).
+                (or, frankly, anywhere you want throughout my profiles; see
+                links below).
               </p>
             </div>
           </div>

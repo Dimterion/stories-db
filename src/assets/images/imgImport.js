@@ -1,5 +1,6 @@
-import storyOne from "./story-one.jpg";
+// Local images example
+// import exampleImg from "./exampleImg.jpg";
 
 export const storyImages = {
-  "story-one": storyOne,
+  // "story-slug": exampleImg,
 };
