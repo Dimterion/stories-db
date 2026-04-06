@@ -69,3 +69,10 @@ export const CopyrightIcon = ({
     <path d="M14.83 14.83a4 4 0 1 1 0-5.66" />
   </svg>
 );
+
+export const CloseIcon = ({ size = 16, color = "currentColor", className }) => (
+  <svg {...iconProps(size, color, className)}>
+    <line x1="18" y1="6" x2="6" y2="18" />
+    <line x1="6" y1="6" x2="18" y2="18" />
+  </svg>
+);

@@ -1,3 +1,5 @@
+import { CloseIcon } from "./Icons";
+
 export default function FilterInput({ filter, onFilterChange }) {
   return (
     <div className="filter-input-wrapper">
@@ -19,7 +21,7 @@ export default function FilterInput({ filter, onFilterChange }) {
             onClick={() => onFilterChange("")}
             aria-label="Clear search"
           >
-            ✕
+            <CloseIcon size={12} />
           </button>
         )}
       </div>
