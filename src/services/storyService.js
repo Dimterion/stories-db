@@ -9,7 +9,7 @@ import { storyImages } from "../assets/images/imgImport";
 // fetch(`${API_URL}/stories?limit=${limit}`)
 // fetch(`${API_URL}/stories/${id}`)
 
-const USE_LOCAL_DATA = true;
+const USE_LOCAL_DATA = import.meta.env.VITE_USE_LOCAL_DATA;
 const STORIES_API_URL = import.meta.env.VITE_STORIES_API_URL;
 const STORY_API_URL = import.meta.env.VITE_STORY_API_URL;
 

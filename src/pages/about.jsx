@@ -1,7 +1,7 @@
 import { useMetadata } from "../services/hooks";
 import aboutPageImg from "../assets/images/about-page-img.jpg";
 
-export default function AboutPage() {
+export default function AboutPage({ stories = [] }) {
   useMetadata({
     title: "About | Stories",
     description:
@@ -31,7 +31,7 @@ export default function AboutPage() {
             <img src={aboutPageImg} alt="A circle with a signature." />
           </div>
           <div className="about-hero-badge">
-            <p className="about-badge-number">10+</p>
+            <p className="about-badge-number">{stories.length}</p>
             <p className="about-badge-label">Stories to read</p>
           </div>
         </div>
@@ -45,8 +45,8 @@ export default function AboutPage() {
         <div className="about-vision-content">
           <p>I'm a developer who likes writing both code and stories.</p>
           <p>
-            Combining these couple of passions of mine, I do both every
-            day for several years already.
+            Combining these couple of passions of mine, I do both every day for
+            several years already.
           </p>
 
           <blockquote className="about-quote">
