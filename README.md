@@ -8,6 +8,7 @@ A web-site to store a collection of stories.
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
+- [Screenshots](#screenshots)
 - [Current version](#current-version)
 - [Contact Info](#contact-info)
 
@@ -26,9 +27,23 @@ A web-site to store a collection of stories.
 - JavaScript
 - CSS
 
+## <a id="screenshots"></a>📷 Screenshots
+
+### Home Page
+
+<img src="./public/screenshots/home_page.jpg" alt="Stories site home page" width="300" />
+
+**Caption:** Home page with individual posts cards.
+
+### Post Page
+
+<img src="./public/screenshots/post_page.jpg" alt="Stories site post page" width="300" />
+
+**Caption:** Post page for individual posts.
+
 ## <a id="current-version"></a>🔗 Current version
 
-Work in progress
+[Live Version](https://stories.dimterion.com/)
 
 ## <a id="contact-info"></a>📫 Contact info
 
