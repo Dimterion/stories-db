@@ -9,7 +9,7 @@ A web-site to store a collection of stories.
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Screenshots](#screenshots)
-- [Current version](#current-version)
+- [Live Version](#live-version)
 - [Contact Info](#contact-info)
 
 ## <a id="features"></a>📌 Features
@@ -41,9 +41,9 @@ A web-site to store a collection of stories.
 
 **Caption:** Post page for individual posts.
 
-## <a id="current-version"></a>🔗 Current version
+## <a id="live-version"></a>🔗 Live version
 
-[Live Version](https://stories.dimterion.com/)
+[Stories](https://stories.dimterion.com/)
 
 ## <a id="contact-info"></a>📫 Contact info
 
