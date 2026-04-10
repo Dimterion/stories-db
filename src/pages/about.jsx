@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useMetadata } from "../services/hooks";
 import aboutPageImg from "../assets/images/about-page-img.jpg";
 
@@ -30,10 +31,10 @@ export default function AboutPage({ stories = [] }) {
           <div className="about-hero-image-frame">
             <img src={aboutPageImg} alt="A circle with a signature." />
           </div>
-          <div className="about-hero-badge">
+          <Link to="/" className="about-hero-badge">
             <p className="about-badge-number">{stories.length}</p>
             <p className="about-badge-label">Stories to read</p>
-          </div>
+          </Link>
         </div>
       </section>
 

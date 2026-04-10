@@ -809,6 +809,15 @@ button {
   padding: 1rem;
   border-radius: 0.5rem;
   display: none;
+  transition: transform 0.2s ease;
+}
+
+.about-hero-badge:hover {
+  transform: rotate(2deg);
+}
+
+.about-hero-badge:active {
+  transform: scale(0.99);
 }
 
 @media (min-width: 768px) {
