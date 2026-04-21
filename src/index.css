@@ -220,11 +220,13 @@ button {
   max-width: 600px;
 }
 
-.home-hero-subtitle a {
+.home-hero-subtitle a,
+.about-quote a {
   text-decoration: underline;
 }
 
-.home-hero-subtitle a {
+.home-hero-subtitle a:hover,
+.about-quote a:hover {
   color: var(--color-primary);
 }
 

@@ -52,7 +52,7 @@ export default function AboutPage({ stories = [] }) {
 
           <blockquote className="about-quote">
             This site stores all kinds of stories of various genres and topics
-            like a tiny library.
+            like a tiny library. <Link to="/">Take a look.</Link>
           </blockquote>
 
           <p>
